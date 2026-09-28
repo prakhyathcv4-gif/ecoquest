@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eco Challenges – Take Action & Earn Green Points 🌱</title>
+  <meta name="description" content="Engage in practical daily eco-challenges. Earn Eco Points, level up your green habits, and save your streak using browser LocalStorage.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo" aria-label="EcoQuest Home">
+        <span class="brand-icon">🌱</span>
+        <span>EcoQuest</span>
+        <span class="brand-tagline-subtle">· Green Habits</span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="main-nav" aria-label="Primary Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="eco-challenges.html" class="nav-link active">Challenges</a>
+        <a href="eco-tips.html" class="nav-link">Eco Tips</a>
+        
+        <div class="nav-dropdown">
+          <button class="nav-link nav-dropdown-trigger" type="button" aria-haspopup="true">
+            Topics ▾
+          </button>
+          <div class="nav-dropdown-menu">
+            <a href="waste-management.html" class="nav-dropdown-item">♻️ Waste Management</a>
+            <a href="water-saving.html" class="nav-dropdown-item">💧 Water Conservation</a>
+            <a href="energy-saving.html" class="nav-dropdown-item">⚡ Energy Saving</a>
+            <a href="green-food.html" class="nav-dropdown-item">🥗 Sustainable Food</a>
+            <a href="green-travel.html" class="nav-dropdown-item">🚲 Green Travel</a>
+          </div>
+        </div>
+
+        <a href="upcycling.html" class="nav-link">Upcycling</a>
+        <a href="eco-calculator.html" class="nav-link">Calculator</a>
+        <a href="eco-quiz.html" class="nav-link">Quiz</a>
+        <a href="leaderboard.html" class="nav-link">Leaderboard</a>
+      </nav>
+
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <button class="eco-points-badge" type="button" title="View Eco Leaderboard">
+          <span>🌱</span>
+          <span class="eco-points-value">120</span>
+          <span>pts</span>
+        </button>
+
+        <button class="btn-icon theme-toggle-btn" type="button" aria-label="Toggle theme">
+          <span class="theme-icon-slot">🌙</span>
+        </button>
+
+        <button class="mobile-nav-toggle" type="button" aria-label="Toggle mobile menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-menu-drawer" aria-label="Mobile Navigation">
+    <a href="index.html" class="mobile-nav-item">🏠 Home</a>
+    <a href="about.html" class="mobile-nav-item">📖 About EcoQuest</a>
+    <a href="eco-challenges.html" class="mobile-nav-item active">🎯 Eco Challenges</a>
+    <a href="eco-tips.html" class="mobile-nav-item">💡 Eco Tips</a>
+    
+    <div class="mobile-category-label">Sustainability Topics</div>
+    <a href="waste-management.html" class="mobile-nav-item">♻️ Waste Management</a>
+    <a href="water-saving.html" class="mobile-nav-item">💧 Water Conservation</a>
+    <a href="energy-saving.html" class="mobile-nav-item">⚡ Energy Saving</a>
+    <a href="green-food.html" class="mobile-nav-item">🥗 Sustainable Food</a>
+    <a href="green-travel.html" class="mobile-nav-item">🚲 Green Travel</a>
+
+    <div class="mobile-category-label">Interactive Tools</div>
+    <a href="upcycling.html" class="mobile-nav-item">✂️ Upcycling Gallery</a>
+    <a href="eco-calculator.html" class="mobile-nav-item">📊 Eco Calculator</a>
+    <a href="eco-quiz.html" class="mobile-nav-item">🧠 Eco Quiz</a>
+    <a href="leaderboard.html" class="mobile-nav-item">🏆 Leaderboard</a>
+    <a href="contact.html" class="mobile-nav-item">✉️ Contact Us</a>
+  </div>
+
+  <main>
+    <!-- PAGE HEADER -->
+    <section class="page-header">
+      <div class="container page-header-content">
+        <div class="page-kicker">Interactive Gamification</div>
+        <h1 class="page-title">Daily Eco Challenges</h1>
+        <p class="page-description">
+          Take practical micro-actions today. Each completed challenge adds points to your live Eco Score and saves automatically in your browser.
+        </p>
+      </div>
+    </section>
+
+    <!-- SECTION: CHALLENGES DASHBOARD -->
+    <section class="section">
+      <div class="container">
+        
+        <!-- Live Stats & Progress Strip -->
+        <div class="challenge-stats-strip">
+          <div>
+            <div style="font-size: 0.825rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">Your Completed Challenges</div>
+            <div style="font-family: var(--font-heading); font-size: 2rem; font-weight: 800; color: var(--forest-green);">
+              <span id="completed-challenges-count">0</span> / 8 Active
+            </div>
+          </div>
+
+          <div style="flex-grow: 1; max-width: 400px;">
+            <div style="display: flex; justify-content: space-between; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.4rem;">
+              <span>Challenge Completion</span>
+              <span style="color: var(--leaf-green);">Live Progress</span>
+            </div>
+            <div class="progress-track">
+              <div id="challenges-progress-bar" class="progress-fill" style="width: 0%;"></div>
+            </div>
+          </div>
+
+          <div>
+            <div style="font-size: 0.825rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">Current Eco Points</div>
+            <div style="font-family: var(--font-heading); font-size: 2rem; font-weight: 800; color: var(--leaf-green);">
+              🌱 <span class="eco-points-value">120</span> pts
+            </div>
+          </div>
+        </div>
+
+        <!-- Challenges Grid -->
+        <div class="challenges-container grid-3">
+          
+          <!-- Challenge 1: Plastic-Free Day -->
+          <div class="challenge-card" data-id="ch_plastic_free" data-points="20">
+            <div>
+              <div class="challenge-top">
+                <span style="font-size: 2.2rem;">🛍️</span>
+                <span class="challenge-points">+20 pts</span>
+              </div>
+              <h3 class="challenge-title" style="font-size: 1.25rem; color: var(--forest-green); margin-bottom: 0.5rem;">Plastic-Free Day</h3>
+              <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6;">
+                Avoid single-use plastic for one full day. Decline plastic bags, disposable cutlery, straws, and cling wrap.
+              </p>
+            </div>
+            <button class="challenge-btn" type="button">Complete Challenge</button>
+          </div>
+
+          <!-- Challenge 2: Green Commute -->
+          <div class="challenge-card" data-id="ch_green_commute" data-points="30">
+            <div>
+              <div class="challenge-top">
+                <span style="font-size: 2.2rem;">🚲</span>
+                <span class="challenge-points">+30 pts</span>
+              </div>
+              <h3 class="challenge-title" style="font-size: 1.25rem; color: var(--forest-green); margin-bottom: 0.5rem;">Green Commute</h3>
+              <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6;">
+                Walk, cycle, or use public transport (bus/metro) for all your campus or work journeys instead of driving alone.
+              </p>
+            </div>
+            <button class="challenge-btn" type="button">Complete Challenge</button>
+          </div>
+
+          <!-- Challenge 3: Save Energy -->
+          <div class="challenge-card" data-id="ch_save_energy" data-points="15">
+            <div>
+              <div class="challenge-top">
+                <span style="font-size: 2.2rem;">⚡</span>
+                <span class="challenge-points">+15 pts</span>
+              </div>
+              <h3 class="challenge-title" style="font-size: 1.25rem; color: var(--forest-green); margin-bottom: 0.5rem;">Save Energy</h3>
+              <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6;">
+                Switch off unnecessary lights, unplug standby phone/laptop chargers, and maximize natural daylight study hours.
+              </p>
+            </div>
+            <button class="challenge-btn" type="button">Complete Challenge</button>
+          </div>
+
+          <!-- Challenge 4: Save Water -->
+          <div class="challenge-card" data-id="ch_save_water" data-points="20">
+            <div>
+              <div class="challenge-top">
+                <span style="font-size: 2.2rem;">💧</span>
+                <span class="challenge-points">+20 pts</span>
+              </div>
+              <h3 class="challenge-title" style="font-size: 1.25rem; color: var(--forest-green); margin-bottom: 0.5rem;">Save Water</h3>
+              <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6;">
+                Reduce unnecessary water usage. Take a swift 5-minute shower and turn off the tap completely while brushing your teeth.
+              </p>
+            </div>
+            <button class="challenge-btn" type="button">Complete Challenge</button>
+          </div>
+
+          <!-- Challenge 5: Plant-Based Meal Day -->
+          <div class="challenge-card" data-id="ch_plant_meal" data-points="25">
+            <div>
+              <div class="challenge-top">
+                <span style="font-size: 2.2rem;">🥗</span>
+                <span class="challenge-points">+25 pts</span>
+              </div>
+              <h3 class="challenge-title" style="font-size: 1.25rem; color: var(--forest-green); margin-bottom: 0.5rem;">Meatless Green Meals</h3>
+              <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6;">
+                Eat nutritious 100% plant-based meals today (lentils, beans, tofu, seasonal veggies) to drastically slash your food carbon footprint.
+              </p>
+            </div>
+            <button class="challenge-btn" type="button">Complete Challenge</button>
+          </div>
+
+          <!-- Challenge 6: Zero Food Waste -->
+          <div class="challenge-card" data-id="ch_zero_food_waste" data-points="20">
+            <div>
+              <div class="challenge-top">
+                <span style="font-size: 2.2rem;">🍱</span>
+                <span class="challenge-points">+20 pts</span>
+              </div>
+              <h3 class="challenge-title" style="font-size: 1.25rem; color: var(--forest-green); margin-bottom: 0.5rem;">Zero Food Waste Day</h3>
+              <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6;">
+                Plan portions accurately, eat all leftovers for lunch, and avoid tossing edible food into the trash can.
+              </p>
+            </div>
+            <button class="challenge-btn" type="button">Complete Challenge</button>
+          </div>
+
+          <!-- Challenge 7: Cold Wash Laundry -->
+          <div class="challenge-card" data-id="ch_cold_laundry" data-points="15">
+            <div>
+              <div class="challenge-top">
+                <span style="font-size: 2.2rem;">🧺</span>
+                <span class="challenge-points">+15 pts</span>
+              </div>
+              <h3 class="challenge-title" style="font-size: 1.25rem; color: var(--forest-green); margin-bottom: 0.5rem;">Cold Wash Laundry</h3>
+              <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6;">
+                Do your laundry load using cold water instead of hot. 90% of washing machine energy goes entirely into heating water!
+              </p>
+            </div>
+            <button class="challenge-btn" type="button">Complete Challenge</button>
+          </div>
+
+          <!-- Challenge 8: Upcycle or Repair -->
+          <div class="challenge-card" data-id="ch_upcycle_item" data-points="30">
+            <div>
+              <div class="challenge-top">
+                <span style="font-size: 2.2rem;">✂️</span>
+                <span class="challenge-points">+30 pts</span>
+              </div>
+              <h3 class="challenge-title" style="font-size: 1.25rem; color: var(--forest-green); margin-bottom: 0.5rem;">Upcycle or Repair</h3>
+              <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6;">
+                Mend a torn garment, repurpose an empty glass jar into a container, or build a plant pot from an old PET bottle.
+              </p>
+            </div>
+            <button class="challenge-btn" type="button">Complete Challenge</button>
+          </div>
+
+        </div>
+
+        <div style="background-color: var(--card-subtle); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 2rem; margin-top: 3.5rem; text-align: center;">
+          <h3 style="font-size: 1.35rem; color: var(--forest-green); margin-bottom: 0.5rem;">Want to climb the ranks?</h3>
+          <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto 1.5rem;">
+            Your points are stored safely in your browser. Check where you rank against student eco-warriors on our community leaderboard!
+          </p>
+          <a href="leaderboard.html" class="btn btn-primary">Check Eco Leaderboard 🏆</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-title">
+            <span>🌱</span>
+            <span>EcoQuest</span>
+          </div>
+          <p class="footer-brand-tagline">
+            "Small Actions. Big Impact." An interactive educational platform encouraging students and young people to build sustainable habits.
+          </p>
+          <div class="footer-social-row">
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="footer-social-btn" aria-label="Instagram">📸</a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener" class="footer-social-btn" aria-label="LinkedIn">💼</a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" class="footer-social-btn" aria-label="YouTube">▶️</a>
+            <a href="https://github.com" target="_blank" rel="noopener" class="footer-social-btn" aria-label="GitHub">🐙</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Quick Links</div>
+          <ul class="footer-links-list">
+            <li><a href="eco-challenges.html" class="footer-link">Eco Challenges</a></li>
+            <li><a href="eco-tips.html" class="footer-link">Eco Tips</a></li>
+            <li><a href="eco-calculator.html" class="footer-link">Calculator</a></li>
+            <li><a href="eco-quiz.html" class="footer-link">Quiz</a></li>
+            <li><a href="upcycling.html" class="footer-link">Upcycling</a></li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Sustainability Topics</div>
+          <ul class="footer-links-list">
+            <li><a href="waste-management.html" class="footer-link">Waste Management</a></li>
+            <li><a href="water-saving.html" class="footer-link">Water Conservation</a></li>
+            <li><a href="energy-saving.html" class="footer-link">Energy Saving</a></li>
+            <li><a href="green-food.html" class="footer-link">Sustainable Food</a></li>
+            <li><a href="green-travel.html" class="footer-link">Green Travel</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Eco Action</div>
+          <p style="font-size: 0.9rem; color: #bad2c2; margin-bottom: 1rem;">
+            Completed a challenge? Test your broader environmental awareness in the Eco Quiz!
+          </p>
+          <a href="eco-quiz.html" class="btn btn-secondary btn-sm" style="width: 100%;">Take Eco Quiz 🧠</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 EcoQuest. All Rights Reserved.</div>
+        <div>Built with HTML5, CSS3, & Vanilla JavaScript. Clean, static, client-side application.</div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top-btn" type="button" aria-label="Scroll back to top">↑</button>
+  <script src="js/script.js" defer></script>
+</body>
+</html>

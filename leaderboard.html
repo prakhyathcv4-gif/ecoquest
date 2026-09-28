@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eco Leaderboard & Badges – EcoQuest 🏆</title>
+  <meta name="description" content="View our friendly student eco leaderboard. Track your rank, view earned sustainability badges, and customize your nickname using LocalStorage.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo" aria-label="EcoQuest Home">
+        <span class="brand-icon">🌱</span>
+        <span>EcoQuest</span>
+        <span class="brand-tagline-subtle">· Green Habits</span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="main-nav" aria-label="Primary Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="eco-challenges.html" class="nav-link">Challenges</a>
+        <a href="eco-tips.html" class="nav-link">Eco Tips</a>
+        
+        <div class="nav-dropdown">
+          <button class="nav-link nav-dropdown-trigger" type="button" aria-haspopup="true">
+            Topics ▾
+          </button>
+          <div class="nav-dropdown-menu">
+            <a href="waste-management.html" class="nav-dropdown-item">♻️ Waste Management</a>
+            <a href="water-saving.html" class="nav-dropdown-item">💧 Water Conservation</a>
+            <a href="energy-saving.html" class="nav-dropdown-item">⚡ Energy Saving</a>
+            <a href="green-food.html" class="nav-dropdown-item">🥗 Sustainable Food</a>
+            <a href="green-travel.html" class="nav-dropdown-item">🚲 Green Travel</a>
+          </div>
+        </div>
+
+        <a href="upcycling.html" class="nav-link">Upcycling</a>
+        <a href="eco-calculator.html" class="nav-link">Calculator</a>
+        <a href="eco-quiz.html" class="nav-link">Quiz</a>
+        <a href="leaderboard.html" class="nav-link active">Leaderboard</a>
+      </nav>
+
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <button class="eco-points-badge" type="button" title="View Eco Leaderboard">
+          <span>🌱</span>
+          <span class="eco-points-value">120</span>
+          <span>pts</span>
+        </button>
+
+        <button class="btn-icon theme-toggle-btn" type="button" aria-label="Toggle theme">
+          <span class="theme-icon-slot">🌙</span>
+        </button>
+
+        <button class="mobile-nav-toggle" type="button" aria-label="Toggle mobile menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-menu-drawer" aria-label="Mobile Navigation">
+    <a href="index.html" class="mobile-nav-item">🏠 Home</a>
+    <a href="about.html" class="mobile-nav-item">📖 About EcoQuest</a>
+    <a href="eco-challenges.html" class="mobile-nav-item">🎯 Eco Challenges</a>
+    <a href="eco-tips.html" class="mobile-nav-item">💡 Eco Tips</a>
+    
+    <div class="mobile-category-label">Sustainability Topics</div>
+    <a href="waste-management.html" class="mobile-nav-item">♻️ Waste Management</a>
+    <a href="water-saving.html" class="mobile-nav-item">💧 Water Conservation</a>
+    <a href="energy-saving.html" class="mobile-nav-item">⚡ Energy Saving</a>
+    <a href="green-food.html" class="mobile-nav-item">🥗 Sustainable Food</a>
+    <a href="green-travel.html" class="mobile-nav-item">🚲 Green Travel</a>
+
+    <div class="mobile-category-label">Interactive Tools</div>
+    <a href="upcycling.html" class="mobile-nav-item">✂️ Upcycling Gallery</a>
+    <a href="eco-calculator.html" class="mobile-nav-item">📊 Eco Calculator</a>
+    <a href="eco-quiz.html" class="mobile-nav-item">🧠 Eco Quiz</a>
+    <a href="leaderboard.html" class="mobile-nav-item active">🏆 Leaderboard</a>
+    <a href="contact.html" class="mobile-nav-item">✉️ Contact Us</a>
+  </div>
+
+  <main>
+    <!-- PAGE HEADER -->
+    <section class="page-header">
+      <div class="container page-header-content">
+        <div class="page-kicker">Friendly Gamification</div>
+        <h1 class="page-title">Eco Leaderboard</h1>
+        <p class="page-description">
+          Celebrate sustainable achievements with our demonstration campus community. Your completed challenges and quizzes automatically position you on this live board.
+        </p>
+      </div>
+    </section>
+
+    <!-- SECTION: USER STATUS & NICKNAME CUSTOMIZER -->
+    <section class="section">
+      <div class="container" style="max-width: 860px;">
+        
+        <!-- User Profile Strip -->
+        <div style="background: linear-gradient(135deg, var(--card-bg) 0%, var(--mint-bg) 100%); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 2rem; margin-bottom: 2.5rem; box-shadow: var(--shadow-sm); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1.5rem;">
+          <div>
+            <div style="font-size: 0.825rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">Your Green Profile</div>
+            <div style="display: flex; align-items: center; gap: 0.75rem; margin-top: 0.35rem;">
+              <span style="font-size: 2.25rem;">🌱</span>
+              <div>
+                <div style="font-family: var(--font-heading); font-size: 1.4rem; font-weight: 800; color: var(--forest-green);">
+                  <span class="eco-points-value">120</span> Eco Points
+                </div>
+                <div style="font-size: 0.85rem; color: var(--text-secondary);">Saved locally in browser</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Edit Nickname -->
+          <div style="display: flex; gap: 0.5rem; align-items: center; max-width: 380px; width: 100%;">
+            <input type="text" id="user-nickname-input" class="form-control" placeholder="Your Green Nickname" value="Eco Explorer (You)" style="margin-bottom: 0;">
+            <button id="save-nickname-btn" class="btn btn-primary btn-sm" type="button" style="white-space: nowrap;">Save Name</button>
+          </div>
+        </div>
+
+        <!-- Demonstration Notice -->
+        <div style="background-color: var(--card-subtle); border-left: 4px solid var(--earth-gold); padding: 1rem 1.25rem; border-radius: var(--radius-sm); margin-bottom: 2rem; font-size: 0.88rem; color: var(--text-secondary);">
+          ℹ️ <strong>Demonstration Leaderboard:</strong> This is a friendly, student-facing demonstration board that updates live based on your browser's LocalStorage points.
+        </div>
+
+        <!-- Leaderboard Table -->
+        <div class="leaderboard-table-card">
+          <div style="padding: 1rem 1.5rem; background-color: var(--card-subtle); border-bottom: 1px solid var(--border-subtle); display: flex; font-size: 0.85rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">
+            <div style="width: 44px; text-align: center;">Rank</div>
+            <div style="margin-left: 4rem; flex-grow: 1;">Student Eco-Warrior</div>
+            <div style="text-align: right;">Points</div>
+          </div>
+
+          <div id="leaderboard-tbody">
+            <!-- Dynamically populated and sorted by JS -->
+          </div>
+        </div>
+
+        <!-- Badges Gallery Section -->
+        <div style="margin-top: 4rem;">
+          <div class="section-header" style="margin-bottom: 2rem;">
+            <div class="section-kicker">Milestones</div>
+            <h2 class="section-title">Eco Badges to Unlock</h2>
+            <p class="section-subtitle">Earn badges as your points grow across challenges, quizzes, and calculators.</p>
+          </div>
+
+          <div class="grid-4">
+            <div class="card" style="text-align: center; padding: 1.5rem 1rem;">
+              <span style="font-size: 2.5rem; display: block; margin-bottom: 0.5rem;">🌱</span>
+              <h4 style="font-size: 1.05rem; color: var(--forest-green); margin-bottom: 0.25rem;">Green Starter</h4>
+              <p style="font-size: 0.82rem; color: var(--text-secondary);">Earn 100+ points by taking first action</p>
+            </div>
+
+            <div class="card" style="text-align: center; padding: 1.5rem 1rem;">
+              <span style="font-size: 2.5rem; display: block; margin-bottom: 0.5rem;">💧</span>
+              <h4 style="font-size: 1.05rem; color: var(--forest-green); margin-bottom: 0.25rem;">Water Warden</h4>
+              <p style="font-size: 0.82rem; color: var(--text-secondary);">Complete 5-min shower water challenge</p>
+            </div>
+
+            <div class="card" style="text-align: center; padding: 1.5rem 1rem;">
+              <span style="font-size: 2.5rem; display: block; margin-bottom: 0.5rem;">🧠</span>
+              <h4 style="font-size: 1.05rem; color: var(--forest-green); margin-bottom: 0.25rem;">Quiz Scholar</h4>
+              <p style="font-size: 0.82rem; color: var(--text-secondary);">Score 8+ on the Eco Awareness Quiz</p>
+            </div>
+
+            <div class="card" style="text-align: center; padding: 1.5rem 1rem;">
+              <span style="font-size: 2.5rem; display: block; margin-bottom: 0.5rem;">👑</span>
+              <h4 style="font-size: 1.05rem; color: var(--forest-green); margin-bottom: 0.25rem;">Earth Guardian</h4>
+              <p style="font-size: 0.82rem; color: var(--text-secondary);">Reach 900+ points across all modules</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-title">
+            <span>🌱</span>
+            <span>EcoQuest</span>
+          </div>
+          <p class="footer-brand-tagline">
+            "Small Actions. Big Impact." An interactive educational platform encouraging students and young people to build sustainable habits.
+          </p>
+          <div class="footer-social-row">
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="footer-social-btn" aria-label="Instagram">📸</a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener" class="footer-social-btn" aria-label="LinkedIn">💼</a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" class="footer-social-btn" aria-label="YouTube">▶️</a>
+            <a href="https://github.com" target="_blank" rel="noopener" class="footer-social-btn" aria-label="GitHub">🐙</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Quick Links</div>
+          <ul class="footer-links-list">
+            <li><a href="eco-challenges.html" class="footer-link">Eco Challenges</a></li>
+            <li><a href="eco-tips.html" class="footer-link">Eco Tips</a></li>
+            <li><a href="eco-calculator.html" class="footer-link">Calculator</a></li>
+            <li><a href="eco-quiz.html" class="footer-link">Quiz</a></li>
+            <li><a href="upcycling.html" class="footer-link">Upcycling</a></li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Sustainability Topics</div>
+          <ul class="footer-links-list">
+            <li><a href="waste-management.html" class="footer-link">Waste Management</a></li>
+            <li><a href="water-saving.html" class="footer-link">Water Conservation</a></li>
+            <li><a href="energy-saving.html" class="footer-link">Energy Saving</a></li>
+            <li><a href="green-food.html" class="footer-link">Sustainable Food</a></li>
+            <li><a href="green-travel.html" class="footer-link">Green Travel</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Eco Action</div>
+          <p style="font-size: 0.9rem; color: #bad2c2; margin-bottom: 1rem;">
+            Have a recommendation or question for the EcoQuest team? Reach out via our contact page.
+          </p>
+          <a href="contact.html" class="btn btn-secondary btn-sm" style="width: 100%;">Contact Us ✉️</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 EcoQuest. All Rights Reserved.</div>
+        <div>Built with HTML5, CSS3, & Vanilla JavaScript. Clean, static, client-side application.</div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top-btn" type="button" aria-label="Scroll back to top">↑</button>
+  <script src="js/script.js" defer></script>
+</body>
+</html>

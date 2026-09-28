@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eco Impact Calculator – Evaluate Your Green Habits 🌱</title>
+  <meta name="description" content="Calculate your 0-100 Eco Habit Score based on commuting, reusable goods, recycling discipline, and food planning.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo" aria-label="EcoQuest Home">
+        <span class="brand-icon">🌱</span>
+        <span>EcoQuest</span>
+        <span class="brand-tagline-subtle">· Green Habits</span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="main-nav" aria-label="Primary Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="eco-challenges.html" class="nav-link">Challenges</a>
+        <a href="eco-tips.html" class="nav-link">Eco Tips</a>
+        
+        <div class="nav-dropdown">
+          <button class="nav-link nav-dropdown-trigger" type="button" aria-haspopup="true">
+            Topics ▾
+          </button>
+          <div class="nav-dropdown-menu">
+            <a href="waste-management.html" class="nav-dropdown-item">♻️ Waste Management</a>
+            <a href="water-saving.html" class="nav-dropdown-item">💧 Water Conservation</a>
+            <a href="energy-saving.html" class="nav-dropdown-item">⚡ Energy Saving</a>
+            <a href="green-food.html" class="nav-dropdown-item">🥗 Sustainable Food</a>
+            <a href="green-travel.html" class="nav-dropdown-item">🚲 Green Travel</a>
+          </div>
+        </div>
+
+        <a href="upcycling.html" class="nav-link">Upcycling</a>
+        <a href="eco-calculator.html" class="nav-link active">Calculator</a>
+        <a href="eco-quiz.html" class="nav-link">Quiz</a>
+        <a href="leaderboard.html" class="nav-link">Leaderboard</a>
+      </nav>
+
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <button class="eco-points-badge" type="button" title="View Eco Leaderboard">
+          <span>🌱</span>
+          <span class="eco-points-value">120</span>
+          <span>pts</span>
+        </button>
+
+        <button class="btn-icon theme-toggle-btn" type="button" aria-label="Toggle theme">
+          <span class="theme-icon-slot">🌙</span>
+        </button>
+
+        <button class="mobile-nav-toggle" type="button" aria-label="Toggle mobile menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-menu-drawer" aria-label="Mobile Navigation">
+    <a href="index.html" class="mobile-nav-item">🏠 Home</a>
+    <a href="about.html" class="mobile-nav-item">📖 About EcoQuest</a>
+    <a href="eco-challenges.html" class="mobile-nav-item">🎯 Eco Challenges</a>
+    <a href="eco-tips.html" class="mobile-nav-item">💡 Eco Tips</a>
+    
+    <div class="mobile-category-label">Sustainability Topics</div>
+    <a href="waste-management.html" class="mobile-nav-item">♻️ Waste Management</a>
+    <a href="water-saving.html" class="mobile-nav-item">💧 Water Conservation</a>
+    <a href="energy-saving.html" class="mobile-nav-item">⚡ Energy Saving</a>
+    <a href="green-food.html" class="mobile-nav-item">🥗 Sustainable Food</a>
+    <a href="green-travel.html" class="mobile-nav-item">🚲 Green Travel</a>
+
+    <div class="mobile-category-label">Interactive Tools</div>
+    <a href="upcycling.html" class="mobile-nav-item">✂️ Upcycling Gallery</a>
+    <a href="eco-calculator.html" class="mobile-nav-item active">📊 Eco Calculator</a>
+    <a href="eco-quiz.html" class="mobile-nav-item">🧠 Eco Quiz</a>
+    <a href="leaderboard.html" class="mobile-nav-item">🏆 Leaderboard</a>
+    <a href="contact.html" class="mobile-nav-item">✉️ Contact Us</a>
+  </div>
+
+  <main>
+    <!-- PAGE HEADER -->
+    <section class="page-header">
+      <div class="container page-header-content">
+        <div class="page-kicker">Habit Evaluation</div>
+        <h1 class="page-title">Eco Impact Calculator</h1>
+        <p class="page-description">
+          Answer 5 quick lifestyle questions to compute your personalized Eco Habit Score (0-100) and unlock actionable sustainability guidance.
+        </p>
+      </div>
+    </section>
+
+    <!-- SECTION: CALCULATOR FORM -->
+    <section class="section">
+      <div class="container" style="max-width: 800px;">
+        <div class="calculator-wizard">
+          <form id="eco-impact-form">
+            
+            <!-- Question 1: How do you usually travel? -->
+            <div style="margin-bottom: 2rem;">
+              <label class="calc-label" style="font-size: 1.15rem;">1. How do you usually commute or travel for daily trips?</label>
+              <div style="display: flex; flex-direction: column; gap: 0.65rem; margin-top: 0.75rem;">
+                <label class="calc-checkbox-label">
+                  <input type="radio" name="q_travel" value="20" required>
+                  <span>🚶 Walking or Cycling (Zero Emissions)</span>
+                </label>
+                <label class="calc-checkbox-label">
+                  <input type="radio" name="q_travel" value="16">
+                  <span>🚆 Electric Metro / Train</span>
+                </label>
+                <label class="calc-checkbox-label">
+                  <input type="radio" name="q_travel" value="12">
+                  <span>🚌 City Bus or University Shuttle</span>
+                </label>
+                <label class="calc-checkbox-label">
+                  <input type="radio" name="q_travel" value="8">
+                  <span>🚗 Carpooling or Ridesharing</span>
+                </label>
+                <label class="calc-checkbox-label">
+                  <input type="radio" name="q_travel" value="4">
+                  <span>🚙 Driving Alone in a Petrol / Diesel Car</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Question 2: How often do you use public transport? -->
+            <div style="margin-bottom: 2rem;">
+              <label class="calc-label" style="font-size: 1.15rem;">2. How often do you utilize public transit or active transit each week?</label>
+              <div style="display: flex; flex-direction: column; gap: 0.65rem; margin-top: 0.75rem;">
+                <label class="calc-checkbox-label">
+                  <input type="radio" name="q_public" value="20" required>
+                  <span>Every day (5–7 days a week)</span>
+                </label>
+                <label class="calc-checkbox-label">
+                  <input type="radio" name="q_public" value="14">
+                  <span>Frequently (3–4 days a week)</span>
+                </label>
+                <label class="calc-checkbox-label">
+                  <input type="radio" name="q_public" value="8">
+                  <span>Occasionally (1–2 days a week)</span>
+                </label>
+                <label class="calc-checkbox-label">
+                  <input type="radio" name="q_public" value="2">
+                  <span>Rarely or Never</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Question 3: Reusable products -->
+            <div style="margin-bottom: 2rem;">
+              <label class="calc-label" style="font-size: 1.15rem;">3. How many reusable items do you routinely carry and use?</label>
+              <div style="display: flex; flex-direction: column; gap: 0.65rem; margin-top: 0.75rem;">
+                <label class="calc-checkbox-label">
+                  <input type="radio" name="q_reusable" value="20" required>
+                  <span>4+ items (Water bottle, coffee tumbler, tote bag, metal cutlery)</span>
+                </label>
+                <label class="calc-checkbox-label">
+                  <input type="radio" name="q_reusable" value="15">
+                  <span>2–3 items (e.g., bottle and shopping tote bag)</span>
+                </label>
+                <label class="calc-checkbox-label">
+                  <input type="radio" name="q_reusable" value="8">
+                  <span>1 item (only a water bottle)</span>
+                </label>
+                <label class="calc-checkbox-label">
+                  <input type="radio" name="q_reusable" value="2">
+                  <span>None (mostly rely on single-use disposables)</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Question 4: How often do you recycle? -->
+            <div style="margin-bottom: 2rem;">
+              <label class="calc-label" style="font-size: 1.15rem;">4. How disciplined are you with sorting and recycling waste?</label>
+              <div style="display: flex; flex-direction: column; gap: 0.65rem; margin-top: 0.75rem;">
+                <label class="calc-checkbox-label">
+                  <input type="radio" name="q_recycle" value="20" required>
+                  <span>Always — I clean containers, separate paper, glass, e-waste, and organics</span>
+                </label>
+                <label class="calc-checkbox-label">
+                  <input type="radio" name="q_recycle" value="14">
+                  <span>Usually — I recycle bottles and clean paper when bins are accessible</span>
+                </label>
+                <label class="calc-checkbox-label">
+                  <input type="radio" name="q_recycle" value="8">
+                  <span>Sometimes — only when it's extremely convenient</span>
+                </label>
+                <label class="calc-checkbox-label">
+                  <input type="radio" name="q_recycle" value="2">
+                  <span>Rarely or Never</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Question 5: Food waste -->
+            <div style="margin-bottom: 2.5rem;">
+              <label class="calc-label" style="font-size: 1.15rem;">5. How often does edible food or groceries go uneaten in your home?</label>
+              <div style="display: flex; flex-direction: column; gap: 0.65rem; margin-top: 0.75rem;">
+                <label class="calc-checkbox-label">
+                  <input type="radio" name="q_food" value="20" required>
+                  <span>Almost Never — I plan meals carefully and consume all leftovers</span>
+                </label>
+                <label class="calc-checkbox-label">
+                  <input type="radio" name="q_food" value="14">
+                  <span>Rarely — maybe once every couple of weeks</span>
+                </label>
+                <label class="calc-checkbox-label">
+                  <input type="radio" name="q_food" value="8">
+                  <span>Occasionally — a meal or spoiled vegetable tossed weekly</span>
+                </label>
+                <label class="calc-checkbox-label">
+                  <input type="radio" name="q_food" value="2">
+                  <span>Frequently — regular leftovers tossed out</span>
+                </label>
+              </div>
+            </div>
+
+            <div style="text-align: center;">
+              <button type="submit" class="btn btn-primary btn-lg">Calculate My Eco Score ✨</button>
+            </div>
+          </form>
+
+          <!-- RESULTS CARD (Initially hidden until submit) -->
+          <div id="calc-results-section" style="display: none; margin-top: 3rem; padding-top: 2.5rem; border-top: 1px solid var(--border-subtle); text-align: center;">
+            <div style="font-size: 0.85rem; font-weight: 700; color: var(--leaf-green); text-transform: uppercase;">Your Result</div>
+            <h3 id="calc-score-tier" style="font-size: 1.85rem; color: var(--forest-green); margin: 0.5rem 0;">Growing Green Habits</h3>
+
+            <!-- SVG Animated Gauge -->
+            <div style="position: relative; width: 150px; height: 150px; margin: 1.5rem auto;">
+              <svg width="150" height="150" viewBox="0 0 120 120">
+                <circle cx="60" cy="60" r="54" fill="none" stroke="var(--card-subtle)" stroke-width="10" />
+                <circle id="calc-circle-fill" cx="60" cy="60" r="54" fill="none" stroke="var(--leaf-green)" stroke-width="10" stroke-linecap="round" stroke-dasharray="339.29" stroke-dashoffset="100" style="transform: rotate(-90deg); transform-origin: 50% 50%; transition: stroke-dashoffset 1s ease;" />
+              </svg>
+              <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+                <div id="calc-score-display" style="font-family: var(--font-heading); font-size: 2.5rem; font-weight: 800; color: var(--forest-green); line-height: 1;">72</div>
+                <div style="font-size: 0.75rem; color: var(--text-muted); font-weight: 600;">/ 100 PTS</div>
+              </div>
+            </div>
+
+            <p id="calc-score-desc" style="max-width: 600px; margin: 0 auto 1.75rem; color: var(--text-secondary); line-height: 1.6;">
+              Great progress! You practice several mindful habits. Try stepping up by adopting a meatless weekday or starting home food waste composting.
+            </p>
+
+            <div style="background-color: var(--card-subtle); border-radius: var(--radius-md); padding: 1.25rem; font-size: 0.85rem; color: var(--text-muted); margin-bottom: 2rem;">
+              ℹ️ <strong>Educational Note:</strong> This score is a gamified educational self-assessment tool designed to motivate personal habit growth. It is not an audited scientific carbon lifecycle measurement.
+            </div>
+
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+              <a href="eco-challenges.html" class="btn btn-primary">Take a Challenge to Level Up →</a>
+              <a href="leaderboard.html" class="btn btn-secondary">See Leaderboard 🏆</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-title">
+            <span>🌱</span>
+            <span>EcoQuest</span>
+          </div>
+          <p class="footer-brand-tagline">
+            "Small Actions. Big Impact." An interactive educational platform encouraging students and young people to build sustainable habits.
+          </p>
+          <div class="footer-social-row">
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="footer-social-btn" aria-label="Instagram">📸</a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener" class="footer-social-btn" aria-label="LinkedIn">💼</a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" class="footer-social-btn" aria-label="YouTube">▶️</a>
+            <a href="https://github.com" target="_blank" rel="noopener" class="footer-social-btn" aria-label="GitHub">🐙</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Quick Links</div>
+          <ul class="footer-links-list">
+            <li><a href="eco-challenges.html" class="footer-link">Eco Challenges</a></li>
+            <li><a href="eco-tips.html" class="footer-link">Eco Tips</a></li>
+            <li><a href="eco-calculator.html" class="footer-link">Calculator</a></li>
+            <li><a href="eco-quiz.html" class="footer-link">Quiz</a></li>
+            <li><a href="upcycling.html" class="footer-link">Upcycling</a></li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Sustainability Topics</div>
+          <ul class="footer-links-list">
+            <li><a href="waste-management.html" class="footer-link">Waste Management</a></li>
+            <li><a href="water-saving.html" class="footer-link">Water Conservation</a></li>
+            <li><a href="energy-saving.html" class="footer-link">Energy Saving</a></li>
+            <li><a href="green-food.html" class="footer-link">Sustainable Food</a></li>
+            <li><a href="green-travel.html" class="footer-link">Green Travel</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Eco Action</div>
+          <p style="font-size: 0.9rem; color: #bad2c2; margin-bottom: 1rem;">
+            Test your environmental IQ in our interactive 10-question awareness quiz.
+          </p>
+          <a href="eco-quiz.html" class="btn btn-secondary btn-sm" style="width: 100%;">Take Eco Quiz 🧠</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 EcoQuest. All Rights Reserved.</div>
+        <div>Built with HTML5, CSS3, & Vanilla JavaScript. Clean, static, client-side application.</div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top-btn" type="button" aria-label="Scroll back to top">↑</button>
+  <script src="js/script.js" defer></script>
+</body>
+</html>

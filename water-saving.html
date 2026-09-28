@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Water Conservation & Calculator – EcoQuest 💧</title>
+  <meta name="description" content="Explore freshwater conservation, rainwater harvesting, and calculate your household's estimated daily and monthly water savings.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo" aria-label="EcoQuest Home">
+        <span class="brand-icon">🌱</span>
+        <span>EcoQuest</span>
+        <span class="brand-tagline-subtle">· Green Habits</span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="main-nav" aria-label="Primary Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="eco-challenges.html" class="nav-link">Challenges</a>
+        <a href="eco-tips.html" class="nav-link">Eco Tips</a>
+        
+        <div class="nav-dropdown">
+          <button class="nav-link nav-dropdown-trigger active" type="button" aria-haspopup="true">
+            Topics ▾
+          </button>
+          <div class="nav-dropdown-menu">
+            <a href="waste-management.html" class="nav-dropdown-item">♻️ Waste Management</a>
+            <a href="water-saving.html" class="nav-dropdown-item active">💧 Water Conservation</a>
+            <a href="energy-saving.html" class="nav-dropdown-item">⚡ Energy Saving</a>
+            <a href="green-food.html" class="nav-dropdown-item">🥗 Sustainable Food</a>
+            <a href="green-travel.html" class="nav-dropdown-item">🚲 Green Travel</a>
+          </div>
+        </div>
+
+        <a href="upcycling.html" class="nav-link">Upcycling</a>
+        <a href="eco-calculator.html" class="nav-link">Calculator</a>
+        <a href="eco-quiz.html" class="nav-link">Quiz</a>
+        <a href="leaderboard.html" class="nav-link">Leaderboard</a>
+      </nav>
+
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <button class="eco-points-badge" type="button" title="View Eco Leaderboard">
+          <span>🌱</span>
+          <span class="eco-points-value">120</span>
+          <span>pts</span>
+        </button>
+
+        <button class="btn-icon theme-toggle-btn" type="button" aria-label="Toggle theme">
+          <span class="theme-icon-slot">🌙</span>
+        </button>
+
+        <button class="mobile-nav-toggle" type="button" aria-label="Toggle mobile menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-menu-drawer" aria-label="Mobile Navigation">
+    <a href="index.html" class="mobile-nav-item">🏠 Home</a>
+    <a href="about.html" class="mobile-nav-item">📖 About EcoQuest</a>
+    <a href="eco-challenges.html" class="mobile-nav-item">🎯 Eco Challenges</a>
+    <a href="eco-tips.html" class="mobile-nav-item">💡 Eco Tips</a>
+    
+    <div class="mobile-category-label">Sustainability Topics</div>
+    <a href="waste-management.html" class="mobile-nav-item">♻️ Waste Management</a>
+    <a href="water-saving.html" class="mobile-nav-item active">💧 Water Conservation</a>
+    <a href="energy-saving.html" class="mobile-nav-item">⚡ Energy Saving</a>
+    <a href="green-food.html" class="mobile-nav-item">🥗 Sustainable Food</a>
+    <a href="green-travel.html" class="mobile-nav-item">🚲 Green Travel</a>
+
+    <div class="mobile-category-label">Interactive Tools</div>
+    <a href="upcycling.html" class="mobile-nav-item">✂️ Upcycling Gallery</a>
+    <a href="eco-calculator.html" class="mobile-nav-item">📊 Eco Calculator</a>
+    <a href="eco-quiz.html" class="mobile-nav-item">🧠 Eco Quiz</a>
+    <a href="leaderboard.html" class="mobile-nav-item">🏆 Leaderboard</a>
+    <a href="contact.html" class="mobile-nav-item">✉️ Contact Us</a>
+  </div>
+
+  <main>
+    <!-- PAGE HEADER -->
+    <section class="page-header">
+      <div class="container page-header-content">
+        <div class="page-kicker">Vital Resource</div>
+        <h1 class="page-title">Water Conservation</h1>
+        <p class="page-description">
+          Less than 1% of the world's water is accessible for human consumption. Learn how household mindfulness and rainwater harvesting safeguard this finite resource.
+        </p>
+      </div>
+    </section>
+
+    <!-- SECTION: INTERACTIVE WATER CALCULATOR -->
+    <section class="section">
+      <div class="container" style="max-width: 860px;">
+        <div class="section-header">
+          <div class="section-kicker">Interactive Tool</div>
+          <h2 class="section-title">Household Water Savings Calculator</h2>
+          <p class="section-subtitle">
+            Configure your household size and toggle your daily conservation actions to calculate an estimated volume of water saved.
+          </p>
+        </div>
+
+        <div class="calculator-box">
+          <form id="water-calc-form">
+            <div class="calc-group">
+              <label for="water-people" class="calc-label">Number of People in Household:</label>
+              <input type="number" id="water-people" class="calc-input" value="3" min="1" max="20" style="max-width: 140px;">
+            </div>
+
+            <div class="calc-group">
+              <label class="calc-label" style="margin-bottom: 0.85rem;">Select Your Daily Water-Saving Actions:</label>
+              <div class="calc-checkbox-grid">
+                <label class="calc-checkbox-label">
+                  <input type="checkbox" data-liters="45" checked>
+                  <span>🚿 Take 5-min shower vs 15-min (+45L/person)</span>
+                </label>
+
+                <label class="calc-checkbox-label">
+                  <input type="checkbox" data-liters="24" checked>
+                  <span>🪥 Turn off tap while brushing teeth (+24L/person)</span>
+                </label>
+
+                <label class="calc-checkbox-label">
+                  <input type="checkbox" data-liters="30">
+                  <span>🔧 Fix dripping faucet / leaky valve (+30L/person)</span>
+                </label>
+
+                <label class="calc-checkbox-label">
+                  <input type="checkbox" data-liters="20">
+                  <span>🧺 Run only full laundry & dishwasher loads (+20L/person)</span>
+                </label>
+
+                <label class="calc-checkbox-label">
+                  <input type="checkbox" data-liters="15">
+                  <span>🪴 Re-use vegetable rinsing water for plants (+15L/person)</span>
+                </label>
+
+                <label class="calc-checkbox-label">
+                  <input type="checkbox" data-liters="25">
+                  <span>🌧️ Use collected rainwater for outdoor cleaning (+25L/person)</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="calc-result-banner">
+              <div style="font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.9;">Estimated Water Conserved</div>
+              <div class="calc-result-number"><span id="water-saved-daily">207</span> Liters / Day</div>
+              <div style="display: flex; justify-content: center; gap: 2rem; margin-top: 1rem; border-top: 1px solid rgba(255,255,255,0.2); padding-top: 1rem;">
+                <div>Monthly: <strong><span id="water-saved-monthly">6,210</span> L</strong></div>
+                <div>Annual: <strong><span id="water-saved-annual">75,555</span> L</strong></div>
+              </div>
+              <p style="font-size: 0.78rem; opacity: 0.8; margin-top: 1rem;">
+                *Note: This calculation provides an educational estimate based on average municipal appliance flow rates (10–12 L/min showerheads, 6–8 L/min standard faucets).
+              </p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: RAINWATER HARVESTING VISUAL FLOW -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">Sustainable Engineering</div>
+          <h2 class="section-title">Rainwater Harvesting: Closed-Loop Hydrology</h2>
+          <p class="section-subtitle">
+            Capturing rain runoff before it hits asphalt and stormwater channels provides abundant, chemical-free soft water for landscaping and hygiene.
+          </p>
+        </div>
+
+        <div class="rainwater-flow">
+          <div class="flow-step">
+            <div class="flow-number">1</div>
+            <div style="font-size: 2.2rem; margin-bottom: 0.5rem;">🌧️</div>
+            <h3 style="font-size: 1.15rem; color: var(--forest-green); margin-bottom: 0.5rem;">Rain Catchment</h3>
+            <p style="font-size: 0.88rem; color: var(--text-secondary);">
+              Clean rooftop gutters intercept pristine precipitation during storm events.
+            </p>
+          </div>
+
+          <div class="flow-step">
+            <div class="flow-number">2</div>
+            <div style="font-size: 2.2rem; margin-bottom: 0.5rem;">⚙️</div>
+            <h3 style="font-size: 1.15rem; color: var(--forest-green); margin-bottom: 0.5rem;">First-Flush Diverter</h3>
+            <p style="font-size: 0.88rem; color: var(--text-secondary);">
+              Initial dirty runoff with dust and roof debris is flushed away before entering the cistern.
+            </p>
+          </div>
+
+          <div class="flow-step">
+            <div class="flow-number">3</div>
+            <div style="font-size: 2.2rem; margin-bottom: 0.5rem;">🛢️</div>
+            <h3 style="font-size: 1.15rem; color: var(--forest-green); margin-bottom: 0.5rem;">Storage Cistern</h3>
+            <p style="font-size: 0.88rem; color: var(--text-secondary);">
+              Enclosed, light-sealed storage tanks prevent algae formation and mosquito breeding.
+            </p>
+          </div>
+
+          <div class="flow-step">
+            <div class="flow-number">4</div>
+            <div style="font-size: 2.2rem; margin-bottom: 0.5rem;">🌱</div>
+            <h3 style="font-size: 1.15rem; color: var(--forest-green); margin-bottom: 0.5rem;">Targeted Usage</h3>
+            <p style="font-size: 0.88rem; color: var(--text-secondary);">
+              Submersible pumps distribute chlorine-free water to gardens, campus lawns, and toilet tanks.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: WHY WATER MATTERS & POLLUTION PREVENTION -->
+    <section class="section">
+      <div class="container">
+        <div class="grid-3">
+          <div class="card">
+            <div class="card-icon">🌍</div>
+            <h3 class="card-title">Why Freshwater Matters</h3>
+            <p class="card-text">
+              97.5% of all water on Earth is salty ocean water. Of the remaining 2.5% freshwater, nearly 70% is frozen in polar caps. The tiny fraction remaining sustains all 8 billion humans, farms, and terrestrial biodiversity.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card-icon">🚯</div>
+            <h3 class="card-title">Preventing Water Pollution</h3>
+            <p class="card-text">
+              Never pour paints, motor oil, cooking oil, or harsh synthetic chemical cleaners down the sink drain. Urban stormwater runoff carries untreated toxins straight into local rivers, destroying river ecosystems.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card-icon">🚰</div>
+            <h3 class="card-title">Low-Flow Fixtures</h3>
+            <p class="card-text">
+              Installing screw-on sink faucet aerators (costing $3) mixes air into the stream, delivering high rinse pressure while cutting physical water volume by 40% immediately.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-title">
+            <span>🌱</span>
+            <span>EcoQuest</span>
+          </div>
+          <p class="footer-brand-tagline">
+            "Small Actions. Big Impact." An interactive educational platform encouraging students and young people to build sustainable habits.
+          </p>
+          <div class="footer-social-row">
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="footer-social-btn" aria-label="Instagram">📸</a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener" class="footer-social-btn" aria-label="LinkedIn">💼</a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" class="footer-social-btn" aria-label="YouTube">▶️</a>
+            <a href="https://github.com" target="_blank" rel="noopener" class="footer-social-btn" aria-label="GitHub">🐙</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Quick Links</div>
+          <ul class="footer-links-list">
+            <li><a href="eco-challenges.html" class="footer-link">Eco Challenges</a></li>
+            <li><a href="eco-tips.html" class="footer-link">Eco Tips</a></li>
+            <li><a href="eco-calculator.html" class="footer-link">Calculator</a></li>
+            <li><a href="eco-quiz.html" class="footer-link">Quiz</a></li>
+            <li><a href="upcycling.html" class="footer-link">Upcycling</a></li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Sustainability Topics</div>
+          <ul class="footer-links-list">
+            <li><a href="waste-management.html" class="footer-link">Waste Management</a></li>
+            <li><a href="water-saving.html" class="footer-link">Water Conservation</a></li>
+            <li><a href="energy-saving.html" class="footer-link">Energy Saving</a></li>
+            <li><a href="green-food.html" class="footer-link">Sustainable Food</a></li>
+            <li><a href="green-travel.html" class="footer-link">Green Travel</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Eco Action</div>
+          <p style="font-size: 0.9rem; color: #bad2c2; margin-bottom: 1rem;">
+            Ready to tackle energy conservation next? See how phantom power drains your bills.
+          </p>
+          <a href="energy-saving.html" class="btn btn-secondary btn-sm" style="width: 100%;">Energy Saving ⚡</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 EcoQuest. All Rights Reserved.</div>
+        <div>Built with HTML5, CSS3, & Vanilla JavaScript. Clean, static, client-side application.</div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top-btn" type="button" aria-label="Scroll back to top">↑</button>
+  <script src="js/script.js" defer></script>
+</body>
+</html>

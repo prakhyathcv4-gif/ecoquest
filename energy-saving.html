@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Energy Conservation & Habit Tracker – EcoQuest ⚡</title>
+  <meta name="description" content="Discover clean renewable energy sources and track your personal electricity conservation habits with our live interactive progress checklist.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo" aria-label="EcoQuest Home">
+        <span class="brand-icon">🌱</span>
+        <span>EcoQuest</span>
+        <span class="brand-tagline-subtle">· Green Habits</span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="main-nav" aria-label="Primary Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="eco-challenges.html" class="nav-link">Challenges</a>
+        <a href="eco-tips.html" class="nav-link">Eco Tips</a>
+        
+        <div class="nav-dropdown">
+          <button class="nav-link nav-dropdown-trigger active" type="button" aria-haspopup="true">
+            Topics ▾
+          </button>
+          <div class="nav-dropdown-menu">
+            <a href="waste-management.html" class="nav-dropdown-item">♻️ Waste Management</a>
+            <a href="water-saving.html" class="nav-dropdown-item">💧 Water Conservation</a>
+            <a href="energy-saving.html" class="nav-dropdown-item active">⚡ Energy Saving</a>
+            <a href="green-food.html" class="nav-dropdown-item">🥗 Sustainable Food</a>
+            <a href="green-travel.html" class="nav-dropdown-item">🚲 Green Travel</a>
+          </div>
+        </div>
+
+        <a href="upcycling.html" class="nav-link">Upcycling</a>
+        <a href="eco-calculator.html" class="nav-link">Calculator</a>
+        <a href="eco-quiz.html" class="nav-link">Quiz</a>
+        <a href="leaderboard.html" class="nav-link">Leaderboard</a>
+      </nav>
+
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <button class="eco-points-badge" type="button" title="View Eco Leaderboard">
+          <span>🌱</span>
+          <span class="eco-points-value">120</span>
+          <span>pts</span>
+        </button>
+
+        <button class="btn-icon theme-toggle-btn" type="button" aria-label="Toggle theme">
+          <span class="theme-icon-slot">🌙</span>
+        </button>
+
+        <button class="mobile-nav-toggle" type="button" aria-label="Toggle mobile menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-menu-drawer" aria-label="Mobile Navigation">
+    <a href="index.html" class="mobile-nav-item">🏠 Home</a>
+    <a href="about.html" class="mobile-nav-item">📖 About EcoQuest</a>
+    <a href="eco-challenges.html" class="mobile-nav-item">🎯 Eco Challenges</a>
+    <a href="eco-tips.html" class="mobile-nav-item">💡 Eco Tips</a>
+    
+    <div class="mobile-category-label">Sustainability Topics</div>
+    <a href="waste-management.html" class="mobile-nav-item">♻️ Waste Management</a>
+    <a href="water-saving.html" class="mobile-nav-item">💧 Water Conservation</a>
+    <a href="energy-saving.html" class="mobile-nav-item active">⚡ Energy Saving</a>
+    <a href="green-food.html" class="mobile-nav-item">🥗 Sustainable Food</a>
+    <a href="green-travel.html" class="mobile-nav-item">🚲 Green Travel</a>
+
+    <div class="mobile-category-label">Interactive Tools</div>
+    <a href="upcycling.html" class="mobile-nav-item">✂️ Upcycling Gallery</a>
+    <a href="eco-calculator.html" class="mobile-nav-item">📊 Eco Calculator</a>
+    <a href="eco-quiz.html" class="mobile-nav-item">🧠 Eco Quiz</a>
+    <a href="leaderboard.html" class="mobile-nav-item">🏆 Leaderboard</a>
+    <a href="contact.html" class="mobile-nav-item">✉️ Contact Us</a>
+  </div>
+
+  <main>
+    <!-- PAGE HEADER -->
+    <section class="page-header">
+      <div class="container page-header-content">
+        <div class="page-kicker">Powering Tomorrow</div>
+        <h1 class="page-title">Energy Conservation</h1>
+        <p class="page-description">
+          Transitioning from fossil-heavy power grids to renewable clean energy, and eliminating phantom wattage waste through conscious daily habits.
+        </p>
+      </div>
+    </section>
+
+    <!-- SECTION: INTERACTIVE ENERGY CHECKLIST -->
+    <section class="section">
+      <div class="container" style="max-width: 800px;">
+        <div class="section-header">
+          <div class="section-kicker">Habit Tracker</div>
+          <h2 class="section-title">Daily Energy Saver Checklist</h2>
+          <p class="section-subtitle">
+            Check off the habits you practice daily. Watch your Green Habit Progress meter rise in real time!
+          </p>
+        </div>
+
+        <div class="energy-progress-container">
+          <div class="progress-header">
+            <span style="color: var(--forest-green); font-size: 1.1rem;">Green Habit Progress:</span>
+            <span id="energy-progress-text" style="color: var(--leaf-green); font-size: 1.35rem; font-family: var(--font-heading);">0%</span>
+          </div>
+          <div class="progress-track">
+            <div id="energy-progress-fill" class="progress-fill"></div>
+          </div>
+        </div>
+
+        <div id="energy-checklist-container" class="energy-checklist">
+          <!-- Habit 1 -->
+          <label class="checklist-item" data-item-id="en_lights">
+            <input type="checkbox" aria-label="Turn off lights when leaving rooms">
+            <div>
+              <div style="font-weight: 700; color: var(--forest-green);">Turn off lights when vacating a room</div>
+              <div style="font-size: 0.85rem; color: var(--text-secondary);">Lighting accounts for roughly 12% of typical residential electricity bills.</div>
+            </div>
+          </label>
+
+          <!-- Habit 2 -->
+          <label class="checklist-item" data-item-id="en_chargers">
+            <input type="checkbox" aria-label="Unplug unused chargers">
+            <div>
+              <div style="font-weight: 700; color: var(--forest-green);">Unplug unused chargers & laptops</div>
+              <div style="font-size: 0.85rem; color: var(--text-secondary);">Wall transformers draw phantom current even when no device is tethered.</div>
+            </div>
+          </label>
+
+          <!-- Habit 3 -->
+          <label class="checklist-item" data-item-id="en_daylight">
+            <input type="checkbox" aria-label="Use natural daylight">
+            <div>
+              <div style="font-weight: 700; color: var(--forest-green);">Open curtains & study with natural daylight</div>
+              <div style="font-size: 0.85rem; color: var(--text-secondary);">Sunlight enhances circadian alertness while reducing the need for desk lamps.</div>
+            </div>
+          </label>
+
+          <!-- Habit 4 -->
+          <label class="checklist-item" data-item-id="en_ac">
+            <input type="checkbox" aria-label="Moderate AC / Heater settings">
+            <div>
+              <div style="font-weight: 700; color: var(--forest-green);">Moderate AC & heater thermostat settings</div>
+              <div style="font-size: 0.85rem; color: var(--text-secondary);">Setting AC to 24°C (75°F) instead of 18°C saves up to 24% in compressor power.</div>
+            </div>
+          </label>
+
+          <!-- Habit 5 -->
+          <label class="checklist-item" data-item-id="en_appliances">
+            <input type="checkbox" aria-label="Use energy efficient appliances">
+            <div>
+              <div style="font-weight: 700; color: var(--forest-green);">Use energy-efficient LED bulbs & eco appliance modes</div>
+              <div style="font-size: 0.85rem; color: var(--text-secondary);">LEDs use 80% less energy than incandescent bulbs and last 25 times longer.</div>
+            </div>
+          </label>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: RENEWABLE ENERGY CARDS -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">Clean Generation</div>
+          <h2 class="section-title">Four Pillars of Renewable Energy</h2>
+          <p class="section-subtitle">
+            Harnessing infinite natural flows to replace fossil thermal generators that drive atmospheric emissions.
+          </p>
+        </div>
+
+        <div class="grid-4">
+          <!-- Solar -->
+          <div class="card">
+            <div class="card-icon">☀️</div>
+            <h3 class="card-title">Solar Energy</h3>
+            <p class="card-text">
+              Photovoltaic silicon cells convert direct photon radiation from sunlight into direct current electricity without water consumption or moving parts.
+            </p>
+            <div class="card-footer">
+              <span style="font-size: 0.8rem; color: var(--leaf-green); font-weight: 700;">Abundance: Limitless</span>
+            </div>
+          </div>
+
+          <!-- Wind -->
+          <div class="card">
+            <div class="card-icon">💨</div>
+            <h3 class="card-title">Wind Energy</h3>
+            <p class="card-text">
+              Aerodynamic composite turbine blades convert kinetic atmospheric air currents into mechanical rotations that drive electromagnetic generators cleanly.
+            </p>
+            <div class="card-footer">
+              <span style="font-size: 0.8rem; color: var(--leaf-green); font-weight: 700;">Cost: Lowest $/kWh</span>
+            </div>
+          </div>
+
+          <!-- Hydropower -->
+          <div class="card">
+            <div class="card-icon">💧</div>
+            <h3 class="card-title">Hydropower</h3>
+            <p class="card-text">
+              Gravity-fed river currents or pumped storage facilities spin underwater turbines to supply stable, dispatchable baseload clean grid electricity.
+            </p>
+            <div class="card-footer">
+              <span style="font-size: 0.8rem; color: var(--leaf-green); font-weight: 700;">Reliability: High</span>
+            </div>
+          </div>
+
+          <!-- Biomass -->
+          <div class="card">
+            <div class="card-icon">🌱</div>
+            <h3 class="card-title">Biomass Energy</h3>
+            <p class="card-text">
+              Anaerobic biodigesters capture biomethane from agricultural crop stalks and animal manures, preventing uncontrolled atmospheric methane release.
+            </p>
+            <div class="card-footer">
+              <span style="font-size: 0.8rem; color: var(--leaf-green); font-weight: 700;">Circular: High</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: ENERGY EFFICIENCY VS CONSERVATION -->
+    <section class="section">
+      <div class="container">
+        <div class="grid-2" style="align-items: center;">
+          <div>
+            <div class="section-kicker">Knowledge Byte</div>
+            <h2 class="section-title">Energy Efficiency vs. Energy Conservation</h2>
+            <p style="margin-bottom: 1.25rem;">
+              While often used interchangeably, these two concepts represent complementary sides of green living:
+            </p>
+            <ul style="padding-left: 1.25rem; display: flex; flex-direction: column; gap: 0.75rem; color: var(--text-secondary); margin-bottom: 1.5rem;">
+              <li><strong>Energy Efficiency</strong> means using technological advancements to perform the exact same task with less energy input (e.g., swapping a 60W bulb for an 8W LED).</li>
+              <li><strong>Energy Conservation</strong> is a deliberate behavioral decision to use less service or change habits to prevent waste (e.g., switching off the light completely when leaving).</li>
+            </ul>
+            <p>
+              Combining cutting-edge efficiency with disciplined conservation enables homes and campuses to cut power consumption by over 50%.
+            </p>
+          </div>
+          <div style="background-color: var(--card-bg); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 2.25rem; box-shadow: var(--shadow-md);">
+            <h3 style="font-size: 1.35rem; color: var(--forest-green); margin-bottom: 1rem;">The Phantom Load Breakdown</h3>
+            <div style="display: flex; flex-direction: column; gap: 1rem;">
+              <div>
+                <div style="display: flex; justify-content: space-between; font-size: 0.9rem; font-weight: 600; margin-bottom: 0.25rem;">
+                  <span>Desktop Computers & Monitors</span>
+                  <span>~15-20W standby</span>
+                </div>
+                <div class="progress-track"><div class="progress-fill" style="width: 75%; background: #f59e0b;"></div></div>
+              </div>
+              <div>
+                <div style="display: flex; justify-content: space-between; font-size: 0.9rem; font-weight: 600; margin-bottom: 0.25rem;">
+                  <span>Gaming Consoles (Instant-On)</span>
+                  <span>~12-15W standby</span>
+                </div>
+                <div class="progress-track"><div class="progress-fill" style="width: 60%; background: #f59e0b;"></div></div>
+              </div>
+              <div>
+                <div style="display: flex; justify-content: space-between; font-size: 0.9rem; font-weight: 600; margin-bottom: 0.25rem;">
+                  <span>Phone & Tablet Chargers</span>
+                  <span>~2-4W plugged idle</span>
+                </div>
+                <div class="progress-track"><div class="progress-fill" style="width: 25%; background: #22c55e;"></div></div>
+              </div>
+            </div>
+            <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 1.25rem;">
+              Tip: Plug your workspace desk gear into a master smart power strip to switch off with one click.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-title">
+            <span>🌱</span>
+            <span>EcoQuest</span>
+          </div>
+          <p class="footer-brand-tagline">
+            "Small Actions. Big Impact." An interactive educational platform encouraging students and young people to build sustainable habits.
+          </p>
+          <div class="footer-social-row">
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="footer-social-btn" aria-label="Instagram">📸</a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener" class="footer-social-btn" aria-label="LinkedIn">💼</a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" class="footer-social-btn" aria-label="YouTube">▶️</a>
+            <a href="https://github.com" target="_blank" rel="noopener" class="footer-social-btn" aria-label="GitHub">🐙</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Quick Links</div>
+          <ul class="footer-links-list">
+            <li><a href="eco-challenges.html" class="footer-link">Eco Challenges</a></li>
+            <li><a href="eco-tips.html" class="footer-link">Eco Tips</a></li>
+            <li><a href="eco-calculator.html" class="footer-link">Calculator</a></li>
+            <li><a href="eco-quiz.html" class="footer-link">Quiz</a></li>
+            <li><a href="upcycling.html" class="footer-link">Upcycling</a></li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Sustainability Topics</div>
+          <ul class="footer-links-list">
+            <li><a href="waste-management.html" class="footer-link">Waste Management</a></li>
+            <li><a href="water-saving.html" class="footer-link">Water Conservation</a></li>
+            <li><a href="energy-saving.html" class="footer-link">Energy Saving</a></li>
+            <li><a href="green-food.html" class="footer-link">Sustainable Food</a></li>
+            <li><a href="green-travel.html" class="footer-link">Green Travel</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Eco Action</div>
+          <p style="font-size: 0.9rem; color: #bad2c2; margin-bottom: 1rem;">
+            Discover sustainable eating habits! Explore our seasonal and plant-based food guide.
+          </p>
+          <a href="green-food.html" class="btn btn-secondary btn-sm" style="width: 100%;">Sustainable Food 🥗</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 EcoQuest. All Rights Reserved.</div>
+        <div>Built with HTML5, CSS3, & Vanilla JavaScript. Clean, static, client-side application.</div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top-btn" type="button" aria-label="Scroll back to top">↑</button>
+  <script src="js/script.js" defer></script>
+</body>
+</html>

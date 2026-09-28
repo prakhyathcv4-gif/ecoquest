@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Waste Management & Sorting Arena – EcoQuest ♻️</title>
+  <meta name="description" content="Master waste reduction, recycling, and composting. Play the interactive waste sorting game to test your recycling knowledge and earn Eco Points.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo" aria-label="EcoQuest Home">
+        <span class="brand-icon">🌱</span>
+        <span>EcoQuest</span>
+        <span class="brand-tagline-subtle">· Green Habits</span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="main-nav" aria-label="Primary Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="eco-challenges.html" class="nav-link">Challenges</a>
+        <a href="eco-tips.html" class="nav-link">Eco Tips</a>
+        
+        <div class="nav-dropdown">
+          <button class="nav-link nav-dropdown-trigger active" type="button" aria-haspopup="true">
+            Topics ▾
+          </button>
+          <div class="nav-dropdown-menu">
+            <a href="waste-management.html" class="nav-dropdown-item active">♻️ Waste Management</a>
+            <a href="water-saving.html" class="nav-dropdown-item">💧 Water Conservation</a>
+            <a href="energy-saving.html" class="nav-dropdown-item">⚡ Energy Saving</a>
+            <a href="green-food.html" class="nav-dropdown-item">🥗 Sustainable Food</a>
+            <a href="green-travel.html" class="nav-dropdown-item">🚲 Green Travel</a>
+          </div>
+        </div>
+
+        <a href="upcycling.html" class="nav-link">Upcycling</a>
+        <a href="eco-calculator.html" class="nav-link">Calculator</a>
+        <a href="eco-quiz.html" class="nav-link">Quiz</a>
+        <a href="leaderboard.html" class="nav-link">Leaderboard</a>
+      </nav>
+
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <button class="eco-points-badge" type="button" title="View Eco Leaderboard">
+          <span>🌱</span>
+          <span class="eco-points-value">120</span>
+          <span>pts</span>
+        </button>
+
+        <button class="btn-icon theme-toggle-btn" type="button" aria-label="Toggle theme">
+          <span class="theme-icon-slot">🌙</span>
+        </button>
+
+        <button class="mobile-nav-toggle" type="button" aria-label="Toggle mobile menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-menu-drawer" aria-label="Mobile Navigation">
+    <a href="index.html" class="mobile-nav-item">🏠 Home</a>
+    <a href="about.html" class="mobile-nav-item">📖 About EcoQuest</a>
+    <a href="eco-challenges.html" class="mobile-nav-item">🎯 Eco Challenges</a>
+    <a href="eco-tips.html" class="mobile-nav-item">💡 Eco Tips</a>
+    
+    <div class="mobile-category-label">Sustainability Topics</div>
+    <a href="waste-management.html" class="mobile-nav-item active">♻️ Waste Management</a>
+    <a href="water-saving.html" class="mobile-nav-item">💧 Water Conservation</a>
+    <a href="energy-saving.html" class="mobile-nav-item">⚡ Energy Saving</a>
+    <a href="green-food.html" class="mobile-nav-item">🥗 Sustainable Food</a>
+    <a href="green-travel.html" class="mobile-nav-item">🚲 Green Travel</a>
+
+    <div class="mobile-category-label">Interactive Tools</div>
+    <a href="upcycling.html" class="mobile-nav-item">✂️ Upcycling Gallery</a>
+    <a href="eco-calculator.html" class="mobile-nav-item">📊 Eco Calculator</a>
+    <a href="eco-quiz.html" class="mobile-nav-item">🧠 Eco Quiz</a>
+    <a href="leaderboard.html" class="mobile-nav-item">🏆 Leaderboard</a>
+    <a href="contact.html" class="mobile-nav-item">✉️ Contact Us</a>
+  </div>
+
+  <main>
+    <!-- PAGE HEADER -->
+    <section class="page-header">
+      <div class="container page-header-content">
+        <div class="page-kicker">Resource Stewardship</div>
+        <h1 class="page-title">Waste Management</h1>
+        <p class="page-description">
+          Understanding the lifecycle of materials, preventing overflow in landfills, and mastering proper waste segregation through our interactive sorting challenge.
+        </p>
+      </div>
+    </section>
+
+    <!-- SECTION: INTERACTIVE WASTE-SORTING ARENA -->
+    <section class="section">
+      <div class="container" style="max-width: 900px;">
+        <div class="section-header">
+          <div class="section-kicker">Interactive Activity</div>
+          <h2 class="section-title">Where Should This Waste Go?</h2>
+          <p class="section-subtitle">
+            Look at the item on display and click the correct colored bin to sort it properly!
+          </p>
+        </div>
+
+        <div id="waste-sorting-game" class="waste-sorter-arena">
+          <!-- Game Score Header -->
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; font-weight: 700; font-size: 0.95rem;">
+            <span id="waste-progress-counter" style="color: var(--forest-green);">Item 1 of 10</span>
+            <div style="display: flex; gap: 1.25rem;">
+              <span>Score: <strong id="waste-score-val" style="color: var(--leaf-green);">0</strong></span>
+              <span>Streak: <strong id="waste-streak-val" style="color: var(--earth-gold);">0 🔥</strong></span>
+            </div>
+          </div>
+
+          <!-- Current Item Card -->
+          <div class="waste-item-display">
+            <span class="waste-item-icon">🧴</span>
+            <div class="waste-item-name">Plastic Beverage Bottle</div>
+            <div class="waste-item-hint">Select the appropriate bin below.</div>
+          </div>
+
+          <!-- 4 Waste Bins Grid -->
+          <div class="waste-bins-grid">
+            <!-- Green: Biodegradable -->
+            <button class="waste-bin-btn bin-bio" data-bin="bio" type="button">
+              <span class="waste-bin-icon">🟢</span>
+              <span class="waste-bin-label" style="color: #166534;">Biodegradable</span>
+              <span style="font-size: 0.75rem; color: var(--text-muted); margin-top: 2px;">Food & Organics</span>
+            </button>
+
+            <!-- Blue: Recyclable -->
+            <button class="waste-bin-btn bin-recycle" data-bin="recycle" type="button">
+              <span class="waste-bin-icon">🔵</span>
+              <span class="waste-bin-label" style="color: #1d72b8;">Recyclable</span>
+              <span style="font-size: 0.75rem; color: var(--text-muted); margin-top: 2px;">Plastic, Paper, Can</span>
+            </button>
+
+            <!-- Yellow: E-Waste -->
+            <button class="waste-bin-btn bin-ewaste" data-bin="ewaste" type="button">
+              <span class="waste-bin-icon">🟡</span>
+              <span class="waste-bin-label" style="color: #b45309;">E-Waste</span>
+              <span style="font-size: 0.75rem; color: var(--text-muted); margin-top: 2px;">Cables & Gadgets</span>
+            </button>
+
+            <!-- Red: Hazardous -->
+            <button class="waste-bin-btn bin-hazard" data-bin="hazard" type="button">
+              <span class="waste-bin-icon">🔴</span>
+              <span class="waste-bin-label" style="color: #b91c1c;">Hazardous</span>
+              <span style="font-size: 0.75rem; color: var(--text-muted); margin-top: 2px;">Chemicals & Bulbs</span>
+            </button>
+          </div>
+
+          <!-- Feedback Box -->
+          <div class="waste-feedback-box"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: WHAT IS WASTE MANAGEMENT & 4R + COMPOST -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">Core Principles</div>
+          <h2 class="section-title">What is Waste Management?</h2>
+          <p class="section-subtitle">
+            Waste management comprises the collection, transportation, processing, recycling, and disposal of discarded materials. Modern zero-waste strategies prioritize source prevention over downstream landfills.
+          </p>
+        </div>
+
+        <div class="grid-4">
+          <div class="card">
+            <div class="card-icon">📉</div>
+            <h3 class="card-title">1. Reduce</h3>
+            <p class="card-text">
+              Avoiding excessive packaging, opting for digital receipts, refusing free plastic promotional trinkets, and choosing bulk groceries with minimal wrapping.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card-icon">🔄</div>
+            <h3 class="card-title">2. Reuse</h3>
+            <p class="card-text">
+              Re-employing items for their original purpose or novel tasks. Glass pasta jars become pantry canisters, and old shoe boxes become closet organizers.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card-icon">♻️</div>
+            <h3 class="card-title">3. Recycle</h3>
+            <p class="card-text">
+              Transforming sorted clean scrap materials into brand new commodities. Rinsing cans and flattening cardboard are crucial to prevent batch contamination.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card-icon">🍂</div>
+            <h3 class="card-title">4. Compost</h3>
+            <p class="card-text">
+              Aerobic biological breakdown of organic plant scraps, fruit rinds, and coffee grounds into nutrient-dense humus that enriches garden soil without synthetic fertilizers.
+            </p>
+          </div>
+        </div>
+
+        <!-- The 4 Bins Guide -->
+        <div style="margin-top: 3.5rem;">
+          <h3 style="font-size: 1.6rem; color: var(--forest-green); text-align: center; margin-bottom: 2rem;">Segregation Guide: Understanding The Bins</h3>
+
+          <div class="grid-2">
+            <div class="card" style="border-left: 4px solid var(--bin-bio);">
+              <h4 style="font-size: 1.15rem; color: #166534; margin-bottom: 0.5rem;">🟢 Biodegradable (Green Bin)</h4>
+              <p style="font-size: 0.925rem; color: var(--text-secondary); line-height: 1.6;">
+                <strong>Accepted:</strong> Fruit peels, vegetable scraps, tea leaves, coffee grounds, eggshells, garden clippings, non-glossy soiled paper napkins.<br>
+                <strong>Why it matters:</strong> Diverts wet organics away from buried landfills, preventing methane gas formation and producing valuable soil compost.
+              </p>
+            </div>
+
+            <div class="card" style="border-left: 4px solid var(--bin-recycle);">
+              <h4 style="font-size: 1.15rem; color: #1d72b8; margin-bottom: 0.5rem;">🔵 Recyclables (Blue Bin)</h4>
+              <p style="font-size: 0.925rem; color: var(--text-secondary); line-height: 1.6;">
+                <strong>Accepted:</strong> Clean plastic bottles (#1 PET, #2 HDPE), clean corrugated cardboard, aluminum soda cans, clean tin food cans, glass jars.<br>
+                <strong>Crucial rule:</strong> Always rinse out residual liquids or grease before placing in the blue bin to prevent contaminating entire recycling loads.
+              </p>
+            </div>
+
+            <div class="card" style="border-left: 4px solid var(--bin-ewaste);">
+              <h4 style="font-size: 1.15rem; color: #b45309; margin-bottom: 0.5rem;">🟡 Electronic Waste (Yellow Bin)</h4>
+              <p style="font-size: 0.925rem; color: var(--text-secondary); line-height: 1.6;">
+                <strong>Accepted:</strong> Old mobile phones, broken chargers, USB cables, laptops, keyboards, damaged audio headphones, circuit boards.<br>
+                <strong>Why it matters:</strong> Contains valuable precious metals (gold, silver, copper) alongside hazardous flame retardants and heavy metals.
+              </p>
+            </div>
+
+            <div class="card" style="border-left: 4px solid var(--bin-hazard);">
+              <h4 style="font-size: 1.15rem; color: #b91c1c; margin-bottom: 0.5rem;">🔴 Hazardous Waste (Red Bin)</h4>
+              <p style="font-size: 0.925rem; color: var(--text-secondary); line-height: 1.6;">
+                <strong>Accepted:</strong> Alkaline & lithium batteries, paint cans, solvent tins, fluorescent light tubes, pesticide bottles, discarded expired medicines.<br>
+                <strong>Crucial rule:</strong> Must be handed over to certified hazardous waste reclamation facilities to prevent toxic groundwater contamination.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-title">
+            <span>🌱</span>
+            <span>EcoQuest</span>
+          </div>
+          <p class="footer-brand-tagline">
+            "Small Actions. Big Impact." An interactive educational platform encouraging students and young people to build sustainable habits.
+          </p>
+          <div class="footer-social-row">
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="footer-social-btn" aria-label="Instagram">📸</a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener" class="footer-social-btn" aria-label="LinkedIn">💼</a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" class="footer-social-btn" aria-label="YouTube">▶️</a>
+            <a href="https://github.com" target="_blank" rel="noopener" class="footer-social-btn" aria-label="GitHub">🐙</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Quick Links</div>
+          <ul class="footer-links-list">
+            <li><a href="eco-challenges.html" class="footer-link">Eco Challenges</a></li>
+            <li><a href="eco-tips.html" class="footer-link">Eco Tips</a></li>
+            <li><a href="eco-calculator.html" class="footer-link">Calculator</a></li>
+            <li><a href="eco-quiz.html" class="footer-link">Quiz</a></li>
+            <li><a href="upcycling.html" class="footer-link">Upcycling</a></li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Sustainability Topics</div>
+          <ul class="footer-links-list">
+            <li><a href="waste-management.html" class="footer-link">Waste Management</a></li>
+            <li><a href="water-saving.html" class="footer-link">Water Conservation</a></li>
+            <li><a href="energy-saving.html" class="footer-link">Energy Saving</a></li>
+            <li><a href="green-food.html" class="footer-link">Sustainable Food</a></li>
+            <li><a href="green-travel.html" class="footer-link">Green Travel</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Eco Action</div>
+          <p style="font-size: 0.9rem; color: #bad2c2; margin-bottom: 1rem;">
+            Turn old discarded items into useful creations! Explore creative upcycling guides.
+          </p>
+          <a href="upcycling.html" class="btn btn-secondary btn-sm" style="width: 100%;">Upcycling Projects ✂️</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 EcoQuest. All Rights Reserved.</div>
+        <div>Built with HTML5, CSS3, & Vanilla JavaScript. Clean, static, client-side application.</div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top-btn" type="button" aria-label="Scroll back to top">↑</button>
+  <script src="js/script.js" defer></script>
+</body>
+</html>

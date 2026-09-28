@@ -1,0 +1,6 @@
+{
+  "name": "EcoQuest - Turn Everyday Actions into Green Habits",
+  "description": "An interactive eco-lifestyle and environmental awareness platform encouraging sustainable habits through challenges, quizzes, calculators, and upcycling ideas.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoQuest – Turn Everyday Actions into Green Habits 🌱</title>
+  <meta name="description" content="Discover simple ways to live greener, reduce waste, and build a more sustainable future with interactive challenges, calculators, and quizzes.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo" aria-label="EcoQuest Home">
+        <span class="brand-icon">🌱</span>
+        <span>EcoQuest</span>
+        <span class="brand-tagline-subtle">· Green Habits</span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="main-nav" aria-label="Primary Navigation">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="eco-challenges.html" class="nav-link">Challenges</a>
+        <a href="eco-tips.html" class="nav-link">Eco Tips</a>
+        
+        <div class="nav-dropdown">
+          <button class="nav-link nav-dropdown-trigger" type="button" aria-haspopup="true">
+            Topics ▾
+          </button>
+          <div class="nav-dropdown-menu">
+            <a href="waste-management.html" class="nav-dropdown-item">♻️ Waste Management</a>
+            <a href="water-saving.html" class="nav-dropdown-item">💧 Water Conservation</a>
+            <a href="energy-saving.html" class="nav-dropdown-item">⚡ Energy Saving</a>
+            <a href="green-food.html" class="nav-dropdown-item">🥗 Sustainable Food</a>
+            <a href="green-travel.html" class="nav-dropdown-item">🚲 Green Travel</a>
+          </div>
+        </div>
+
+        <a href="upcycling.html" class="nav-link">Upcycling</a>
+        <a href="eco-calculator.html" class="nav-link">Calculator</a>
+        <a href="eco-quiz.html" class="nav-link">Quiz</a>
+        <a href="leaderboard.html" class="nav-link">Leaderboard</a>
+      </nav>
+
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <!-- Eco Points Badge -->
+        <button class="eco-points-badge" type="button" title="View Eco Leaderboard">
+          <span>🌱</span>
+          <span class="eco-points-value">120</span>
+          <span>pts</span>
+        </button>
+
+        <!-- Theme Toggle -->
+        <button class="btn-icon theme-toggle-btn" type="button" aria-label="Toggle theme">
+          <span class="theme-icon-slot">🌙</span>
+        </button>
+
+        <a href="contact.html" class="btn btn-primary btn-sm" style="display: none;">Contact</a>
+
+        <!-- Mobile Nav Hamburger -->
+        <button class="mobile-nav-toggle" type="button" aria-label="Toggle mobile menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-menu-drawer" aria-label="Mobile Navigation">
+    <a href="index.html" class="mobile-nav-item active">🏠 Home</a>
+    <a href="about.html" class="mobile-nav-item">📖 About EcoQuest</a>
+    <a href="eco-challenges.html" class="mobile-nav-item">🎯 Eco Challenges</a>
+    <a href="eco-tips.html" class="mobile-nav-item">💡 Eco Tips</a>
+    
+    <div class="mobile-category-label">Sustainability Topics</div>
+    <a href="waste-management.html" class="mobile-nav-item">♻️ Waste Management</a>
+    <a href="water-saving.html" class="mobile-nav-item">💧 Water Conservation</a>
+    <a href="energy-saving.html" class="mobile-nav-item">⚡ Energy Saving</a>
+    <a href="green-food.html" class="mobile-nav-item">🥗 Sustainable Food</a>
+    <a href="green-travel.html" class="mobile-nav-item">🚲 Green Travel</a>
+
+    <div class="mobile-category-label">Interactive Tools</div>
+    <a href="upcycling.html" class="mobile-nav-item">✂️ Upcycling Gallery</a>
+    <a href="eco-calculator.html" class="mobile-nav-item">📊 Eco Calculator</a>
+    <a href="eco-quiz.html" class="mobile-nav-item">🧠 Eco Quiz</a>
+    <a href="leaderboard.html" class="mobile-nav-item">🏆 Leaderboard</a>
+    <a href="contact.html" class="mobile-nav-item">✉️ Contact Us</a>
+  </div>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="hero-badge">
+            <span>✨</span>
+            <span>Empowering Student Eco-Action</span>
+          </div>
+          <h1 class="hero-title">Small Actions. Big Impact.</h1>
+          <p class="hero-subtitle">
+            Discover simple ways to live greener, reduce waste and build a more sustainable future. Every reusable bottle, short bike ride, and switched-off light shapes tomorrow.
+          </p>
+          <div class="hero-actions">
+            <a href="eco-challenges.html" class="btn btn-primary btn-lg">Start Eco Challenge</a>
+            <a href="eco-tips.html" class="btn btn-secondary btn-lg">Explore Eco Tips</a>
+          </div>
+
+          <!-- Eco Statistics Counter -->
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-number">10,000+</span>
+              <span class="stat-label">Eco Actions</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">500+</span>
+              <span class="stat-label">Challenges Done</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">1,200+</span>
+              <span class="stat-label">Sustainable Tips</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">100%</span>
+              <span class="stat-label">Green Mindset</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Visual Illustration -->
+        <div class="hero-visual">
+          <div class="floating-eco-card floating-card-1">
+            <span style="font-size: 1.5rem;">💧</span>
+            <div>
+              <div style="font-size: 0.85rem; font-weight: 700; color: var(--forest-green);">50L Water Saved</div>
+              <div style="font-size: 0.72rem; color: var(--text-muted);">Shower timer challenge</div>
+            </div>
+          </div>
+
+          <div class="hero-card-display">
+            <!-- Modern Nature SVG Visual -->
+            <svg viewBox="0 0 400 320" width="100%" height="auto" style="border-radius: var(--radius-md); background: linear-gradient(135deg, #e8f5ec 0%, #cdeed6 100%);">
+              <defs>
+                <linearGradient id="sunGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#fde047" />
+                  <stop offset="100%" stop-color="#eab308" />
+                </linearGradient>
+                <linearGradient id="hillGrad1" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stop-color="#4ade80" />
+                  <stop offset="100%" stop-color="#16a34a" />
+                </linearGradient>
+                <linearGradient id="hillGrad2" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stop-color="#22c55e" />
+                  <stop offset="100%" stop-color="#14532d" />
+                </linearGradient>
+              </defs>
+              <!-- Sun -->
+              <circle cx="310" cy="70" r="38" fill="url(#sunGrad)" opacity="0.9" />
+              <!-- Clouds -->
+              <path d="M60,80 Q75,60 95,75 Q115,65 130,80 L60,80 Z" fill="#ffffff" opacity="0.8" />
+              <path d="M200,95 Q215,80 230,90 Q245,80 260,95 L200,95 Z" fill="#ffffff" opacity="0.7" />
+              <!-- Wind turbine -->
+              <line x1="120" y1="230" x2="120" y2="150" stroke="#0f766e" stroke-width="4" stroke-linecap="round"/>
+              <circle cx="120" cy="150" r="5" fill="#0f766e"/>
+              <line x1="120" y1="150" x2="95" y2="135" stroke="#0f766e" stroke-width="3" stroke-linecap="round"/>
+              <line x1="120" y1="150" x2="145" y2="135" stroke="#0f766e" stroke-width="3" stroke-linecap="round"/>
+              <line x1="120" y1="150" x2="120" y2="180" stroke="#0f766e" stroke-width="3" stroke-linecap="round"/>
+              <!-- Green Hills -->
+              <path d="M0,240 Q110,180 220,230 Q310,270 400,210 L400,320 L0,320 Z" fill="url(#hillGrad1)" opacity="0.85" />
+              <path d="M0,260 Q130,220 260,270 Q340,300 400,260 L400,320 L0,320 Z" fill="url(#hillGrad2)" />
+              <!-- Center Plant / Sprout -->
+              <circle cx="200" cy="220" r="28" fill="#ffffff" opacity="0.95" />
+              <path d="M200,235 C195,215 178,210 185,195 C198,205 200,220 200,235 Z" fill="#15803d" />
+              <path d="M200,235 C205,215 222,210 215,195 C202,205 200,220 200,235 Z" fill="#22c55e" />
+              <!-- Bicycle silhouette -->
+              <circle cx="280" cy="275" r="10" fill="none" stroke="#ffffff" stroke-width="2.5"/>
+              <circle cx="310" cy="275" r="10" fill="none" stroke="#ffffff" stroke-width="2.5"/>
+              <path d="M280,275 L293,275 L300,264 L290,264 Z M300,264 L306,275" fill="none" stroke="#ffffff" stroke-width="2.5"/>
+            </svg>
+            <div style="margin-top: 1rem; text-align: center;">
+              <span style="font-weight: 700; color: var(--forest-green);">Living Sustainably Every Day</span>
+              <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.25rem;">Simple daily choices add up to monumental collective change.</p>
+            </div>
+          </div>
+
+          <div class="floating-eco-card floating-card-2">
+            <span style="font-size: 1.5rem;">🚲</span>
+            <div>
+              <div style="font-size: 0.85rem; font-weight: 700; color: var(--forest-green);">Zero Emission Trip</div>
+              <div style="font-size: 0.72rem; color: var(--text-muted);">Campus cycling streak</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: WHY ECOQUEST? -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">Why EcoQuest?</div>
+          <h2 class="section-title">Sustainability Starts With Everyday Habits</h2>
+          <p class="section-subtitle">
+            You don't need to rebuild society overnight to protect our planet. Sustainability thrives when millions of students make small, conscious decisions that turn into lifelong green habits.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <div class="card">
+            <div class="card-icon">🌱</div>
+            <h3 class="card-title">Micro-Actions, Real Results</h3>
+            <p class="card-text">
+              Carrying a tote bag, packing lunch in reusable containers, and choosing cold laundry cycles save thousands of pounds of greenhouse gases each year.
+            </p>
+            <div class="card-footer">
+              <a href="about.html" class="card-link">Learn our philosophy →</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-icon">🎮</div>
+            <h3 class="card-title">Interactive Gamification</h3>
+            <p class="card-text">
+              Turn eco-action into a rewarding personal quest. Earn points, track your progress, climb the friendly leaderboard, and unlock sustainability badges.
+            </p>
+            <div class="card-footer">
+              <a href="leaderboard.html" class="card-link">View leaderboard →</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-icon">🎓</div>
+            <h3 class="card-title">Built For Student Life</h3>
+            <p class="card-text">
+              Tailored practical tips for dorm rooms, college campuses, budget grocery shopping, and low-cost zero-waste living that fit a student budget.
+            </p>
+            <div class="card-footer">
+              <a href="eco-tips.html" class="card-link">Explore campus tips →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: EXPLORE ECO LIFE -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">Explore Eco Life</div>
+          <h2 class="section-title">Six Pillars of Everyday Sustainability</h2>
+          <p class="section-subtitle">
+            Dive into practical guides, interactive activities, and educational modules designed to transform how you live, travel, eat, and conserve resources.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <div class="card">
+            <div class="card-icon">🌱</div>
+            <h3 class="card-title">Sustainable Living</h3>
+            <p class="card-text">
+              Mindful consumerism, low-impact daily routines, and conscious consumption designed to minimize your personal footprint effortlessly.
+            </p>
+            <div class="card-footer">
+              <a href="about.html" class="card-link">Explore habits →</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-icon">♻️</div>
+            <h3 class="card-title">Waste Reduction</h3>
+            <p class="card-text">
+              Master the 4R hierarchy: Refuse, Reduce, Reuse, and Recycle. Try our interactive waste-sorting arena to test your disposal instincts.
+            </p>
+            <div class="card-footer">
+              <a href="waste-management.html" class="card-link">Sort waste now →</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-icon">💧</div>
+            <h3 class="card-title">Water Conservation</h3>
+            <p class="card-text">
+              Freshwater is precious. Calculate how many hundreds of liters you can save each month through simple tap, shower, and laundry adjustments.
+            </p>
+            <div class="card-footer">
+              <a href="water-saving.html" class="card-link">Calculate savings →</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-icon">⚡</div>
+            <h3 class="card-title">Energy Saving</h3>
+            <p class="card-text">
+              Eliminate vampire energy loads, harness renewable power, and track your daily energy checklist with our live progress tracker.
+            </p>
+            <div class="card-footer">
+              <a href="energy-saving.html" class="card-link">Energy checklist →</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-icon">🚲</div>
+            <h3 class="card-title">Green Travel</h3>
+            <p class="card-text">
+              Compare walking, biking, metro transit, and electric cars against gas-guzzling vehicles with our interactive journey impact visualizer.
+            </p>
+            <div class="card-footer">
+              <a href="green-travel.html" class="card-link">Compare transit →</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-icon">🥗</div>
+            <h3 class="card-title">Sustainable Food</h3>
+            <p class="card-text">
+              Discover the power of seasonal produce, plant-forward meal planning, local farmers markets, and zero-waste kitchen cooking techniques.
+            </p>
+            <div class="card-footer">
+              <a href="green-food.html" class="card-link">Food guide →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: ECO CHALLENGE PREVIEW -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">Quick Start</div>
+          <h2 class="section-title">Today's Featured Eco Challenges</h2>
+          <p class="section-subtitle">
+            Pick a micro-challenge, take action today, and earn instant Eco Points saved in your browser!
+          </p>
+        </div>
+
+        <div class="challenges-container grid-4">
+          <!-- Challenge 1 -->
+          <div class="challenge-card" data-id="ch_bottle" data-points="20">
+            <div>
+              <div class="challenge-top">
+                <span style="font-size: 2rem;">🚰</span>
+                <span class="challenge-points">+20 pts</span>
+              </div>
+              <h3 class="challenge-title" style="font-size: 1.15rem; color: var(--forest-green); margin-bottom: 0.5rem;">Carry Reusable Bottle</h3>
+              <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.5;">
+                Carry a reusable water flask or tumbler today instead of buying single-use bottled water.
+              </p>
+            </div>
+            <button class="challenge-btn" type="button">Complete Challenge</button>
+          </div>
+
+          <!-- Challenge 2 -->
+          <div class="challenge-card" data-id="ch_lights" data-points="15">
+            <div>
+              <div class="challenge-top">
+                <span style="font-size: 2rem;">💡</span>
+                <span class="challenge-points">+15 pts</span>
+              </div>
+              <h3 class="challenge-title" style="font-size: 1.15rem; color: var(--forest-green); margin-bottom: 0.5rem;">Switch Off Unused Lights</h3>
+              <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.5;">
+                Turn off lamps, ambient lights, and study monitors whenever you step out of a room.
+              </p>
+            </div>
+            <button class="challenge-btn" type="button">Complete Challenge</button>
+          </div>
+
+          <!-- Challenge 3 -->
+          <div class="challenge-card" data-id="ch_plastic" data-points="20">
+            <div>
+              <div class="challenge-top">
+                <span style="font-size: 2rem;">🛍️</span>
+                <span class="challenge-points">+20 pts</span>
+              </div>
+              <h3 class="challenge-title" style="font-size: 1.15rem; color: var(--forest-green); margin-bottom: 0.5rem;">Avoid Single-Use Plastic</h3>
+              <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.5;">
+                Say no to plastic shopping bags, disposable cutlery, and plastic drink straws today.
+              </p>
+            </div>
+            <button class="challenge-btn" type="button">Complete Challenge</button>
+          </div>
+
+          <!-- Challenge 4 -->
+          <div class="challenge-card" data-id="ch_commute" data-points="30">
+            <div>
+              <div class="challenge-top">
+                <span style="font-size: 2rem;">🚶</span>
+                <span class="challenge-points">+30 pts</span>
+              </div>
+              <h3 class="challenge-title" style="font-size: 1.15rem; color: var(--forest-green); margin-bottom: 0.5rem;">Walk or Cycle</h3>
+              <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.5;">
+                Swap a motorized car or scooter ride for a pleasant walk or bicycle ride for trips under 2 km.
+              </p>
+            </div>
+            <button class="challenge-btn" type="button">Complete Challenge</button>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 2.5rem;">
+          <a href="eco-challenges.html" class="btn btn-secondary">View All 10+ Eco Challenges →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: CALL TO ACTION -->
+    <section class="section" style="background: linear-gradient(135deg, var(--forest-green) 0%, var(--leaf-green) 100%); color: #ffffff; text-align: center;">
+      <div class="container" style="max-width: 760px;">
+        <span style="font-size: 2.5rem; display: block; margin-bottom: 1rem;">🌍</span>
+        <h2 style="color: #ffffff; font-size: 2.5rem; margin-bottom: 1rem;">Ready to make your everyday life greener?</h2>
+        <p style="color: #eaf6ee; font-size: 1.15rem; margin-bottom: 2rem;">
+          Join thousands of eco-minded students creating tangible change one small action at a time. Test your habits, upcycle old goods, and inspire your community.
+        </p>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+          <a href="eco-challenges.html" class="btn btn-secondary btn-lg" style="background-color: #ffffff; color: var(--forest-green); border: none;">Start Your Eco Journey</a>
+          <a href="eco-calculator.html" class="btn btn-outline btn-lg" style="color: #ffffff; border-color: rgba(255,255,255,0.4);">Calculate Your Impact</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-title">
+            <span>🌱</span>
+            <span>EcoQuest</span>
+          </div>
+          <p class="footer-brand-tagline">
+            "Small Actions. Big Impact." An interactive educational platform encouraging students and young people to build sustainable habits.
+          </p>
+          <div class="footer-social-row">
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="footer-social-btn" aria-label="Instagram">📸</a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener" class="footer-social-btn" aria-label="LinkedIn">💼</a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" class="footer-social-btn" aria-label="YouTube">▶️</a>
+            <a href="https://github.com" target="_blank" rel="noopener" class="footer-social-btn" aria-label="GitHub">🐙</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Quick Links</div>
+          <ul class="footer-links-list">
+            <li><a href="eco-challenges.html" class="footer-link">Eco Challenges</a></li>
+            <li><a href="eco-tips.html" class="footer-link">Eco Tips</a></li>
+            <li><a href="eco-calculator.html" class="footer-link">Calculator</a></li>
+            <li><a href="eco-quiz.html" class="footer-link">Quiz</a></li>
+            <li><a href="upcycling.html" class="footer-link">Upcycling</a></li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Sustainability Topics</div>
+          <ul class="footer-links-list">
+            <li><a href="waste-management.html" class="footer-link">Waste Management</a></li>
+            <li><a href="water-saving.html" class="footer-link">Water Conservation</a></li>
+            <li><a href="energy-saving.html" class="footer-link">Energy Saving</a></li>
+            <li><a href="green-food.html" class="footer-link">Sustainable Food</a></li>
+            <li><a href="green-travel.html" class="footer-link">Green Travel</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Eco Action</div>
+          <p style="font-size: 0.9rem; color: #bad2c2; margin-bottom: 1rem;">
+            Commit to one green action today. Every completed challenge saves carbon, conserves water, and preserves our natural ecosystems.
+          </p>
+          <a href="leaderboard.html" class="btn btn-secondary btn-sm" style="width: 100%;">View Leaderboard 🏆</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 EcoQuest. All Rights Reserved.</div>
+        <div>Built with HTML5, CSS3, & Vanilla JavaScript. Clean, static, client-side application.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll To Top Button -->
+  <button class="scroll-top-btn" type="button" aria-label="Scroll back to top">↑</button>
+
+  <script src="js/script.js" defer></script>
+</body>
+</html>

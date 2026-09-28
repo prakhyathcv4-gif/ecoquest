@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact the EcoQuest Initiative – Get in Touch ✉️</title>
+  <meta name="description" content="Reach out to the EcoQuest team for campus sustainability partnerships, student green workshops, or feedback on our interactive tools.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo" aria-label="EcoQuest Home">
+        <span class="brand-icon">🌱</span>
+        <span>EcoQuest</span>
+        <span class="brand-tagline-subtle">· Green Habits</span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="main-nav" aria-label="Primary Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="eco-challenges.html" class="nav-link">Challenges</a>
+        <a href="eco-tips.html" class="nav-link">Eco Tips</a>
+        
+        <div class="nav-dropdown">
+          <button class="nav-link nav-dropdown-trigger" type="button" aria-haspopup="true">
+            Topics ▾
+          </button>
+          <div class="nav-dropdown-menu">
+            <a href="waste-management.html" class="nav-dropdown-item">♻️ Waste Management</a>
+            <a href="water-saving.html" class="nav-dropdown-item">💧 Water Conservation</a>
+            <a href="energy-saving.html" class="nav-dropdown-item">⚡ Energy Saving</a>
+            <a href="green-food.html" class="nav-dropdown-item">🥗 Sustainable Food</a>
+            <a href="green-travel.html" class="nav-dropdown-item">🚲 Green Travel</a>
+          </div>
+        </div>
+
+        <a href="upcycling.html" class="nav-link">Upcycling</a>
+        <a href="eco-calculator.html" class="nav-link">Calculator</a>
+        <a href="eco-quiz.html" class="nav-link">Quiz</a>
+        <a href="leaderboard.html" class="nav-link">Leaderboard</a>
+      </nav>
+
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <button class="eco-points-badge" type="button" title="View Eco Leaderboard">
+          <span>🌱</span>
+          <span class="eco-points-value">120</span>
+          <span>pts</span>
+        </button>
+
+        <button class="btn-icon theme-toggle-btn" type="button" aria-label="Toggle theme">
+          <span class="theme-icon-slot">🌙</span>
+        </button>
+
+        <button class="mobile-nav-toggle" type="button" aria-label="Toggle mobile menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-menu-drawer" aria-label="Mobile Navigation">
+    <a href="index.html" class="mobile-nav-item">🏠 Home</a>
+    <a href="about.html" class="mobile-nav-item">📖 About EcoQuest</a>
+    <a href="eco-challenges.html" class="mobile-nav-item">🎯 Eco Challenges</a>
+    <a href="eco-tips.html" class="mobile-nav-item">💡 Eco Tips</a>
+    
+    <div class="mobile-category-label">Sustainability Topics</div>
+    <a href="waste-management.html" class="mobile-nav-item">♻️ Waste Management</a>
+    <a href="water-saving.html" class="mobile-nav-item">💧 Water Conservation</a>
+    <a href="energy-saving.html" class="mobile-nav-item">⚡ Energy Saving</a>
+    <a href="green-food.html" class="mobile-nav-item">🥗 Sustainable Food</a>
+    <a href="green-travel.html" class="mobile-nav-item">🚲 Green Travel</a>
+
+    <div class="mobile-category-label">Interactive Tools</div>
+    <a href="upcycling.html" class="mobile-nav-item">✂️ Upcycling Gallery</a>
+    <a href="eco-calculator.html" class="mobile-nav-item">📊 Eco Calculator</a>
+    <a href="eco-quiz.html" class="mobile-nav-item">🧠 Eco Quiz</a>
+    <a href="leaderboard.html" class="mobile-nav-item">🏆 Leaderboard</a>
+    <a href="contact.html" class="mobile-nav-item active">✉️ Contact Us</a>
+  </div>
+
+  <main>
+    <!-- PAGE HEADER -->
+    <section class="page-header">
+      <div class="container page-header-content">
+        <div class="page-kicker">Get in Touch</div>
+        <h1 class="page-title">Contact EcoQuest</h1>
+        <p class="page-description">
+          Have an eco tip to share, want to collaborate on a campus zero-waste drive, or need help with our interactive tools? We’d love to hear from you.
+        </p>
+      </div>
+    </section>
+
+    <!-- SECTION: CONTACT FORM & INFO -->
+    <section class="section">
+      <div class="container">
+        
+        <!-- Success Banner (Triggered by JS) -->
+        <div id="contact-success-msg" style="display: none; background-color: #dcfce7; border: 1px solid #86efac; color: #15803d; border-radius: var(--radius-md); padding: 1.25rem 1.5rem; margin-bottom: 2.5rem; font-weight: 600; text-align: center;">
+          ✓ Thank you! Your message has been received. Our team will review your note shortly. (+10 Eco Points earned!)
+        </div>
+
+        <div class="contact-layout">
+          
+          <!-- Contact Details Column -->
+          <div>
+            <div class="section-kicker">Connect With Us</div>
+            <h2 style="font-size: 1.85rem; color: var(--forest-green); margin-bottom: 1rem;">Let’s Build a Greener Campus Together</h2>
+            <p style="color: var(--text-secondary); margin-bottom: 2rem; line-height: 1.6;">
+              EcoQuest is an open student initiative promoting zero-waste, energy efficiency, and environmental conservation. Drop us a note or connect on social media.
+            </p>
+
+            <div style="display: flex; flex-direction: column; gap: 1.5rem; margin-bottom: 2.5rem;">
+              <div style="display: flex; gap: 1rem; align-items: flex-start;">
+                <div style="width: 44px; height: 44px; border-radius: var(--radius-md); background-color: var(--mint-bg); color: var(--leaf-green); display: flex; align-items: center; justify-content: center; font-size: 1.25rem; flex-shrink: 0;">
+                  ✉️
+                </div>
+                <div>
+                  <div style="font-weight: 700; color: var(--forest-green); font-size: 0.95rem;">Email Address</div>
+                  <a href="mailto:hello@ecoquest.org" style="color: var(--leaf-green); font-weight: 500;">hello@ecoquest.org</a>
+                </div>
+              </div>
+
+              <div style="display: flex; gap: 1rem; align-items: flex-start;">
+                <div style="width: 44px; height: 44px; border-radius: var(--radius-md); background-color: var(--mint-bg); color: var(--leaf-green); display: flex; align-items: center; justify-content: center; font-size: 1.25rem; flex-shrink: 0;">
+                  📞
+                </div>
+                <div>
+                  <div style="font-weight: 700; color: var(--forest-green); font-size: 0.95rem;">Student Helpline</div>
+                  <div style="color: var(--text-secondary); font-weight: 500;">+1 (800) 432-6783 (Mon–Fri, 9am–5pm)</div>
+                </div>
+              </div>
+
+              <div style="display: flex; gap: 1rem; align-items: flex-start;">
+                <div style="width: 44px; height: 44px; border-radius: var(--radius-md); background-color: var(--mint-bg); color: var(--leaf-green); display: flex; align-items: center; justify-content: center; font-size: 1.25rem; flex-shrink: 0;">
+                  📍
+                </div>
+                <div>
+                  <div style="font-weight: 700; color: var(--forest-green); font-size: 0.95rem;">Campus Innovation Center</div>
+                  <div style="color: var(--text-secondary); font-weight: 500;">Green Commons, Building 4B, Room 102</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Social Media -->
+            <div style="font-weight: 700; color: var(--forest-green); font-size: 0.95rem; margin-bottom: 0.75rem;">Follow Our Social Channels</div>
+            <div style="display: flex; gap: 0.75rem;">
+              <a href="https://instagram.com" target="_blank" rel="noopener" class="footer-social-btn" style="background-color: var(--card-subtle); color: var(--forest-green);" aria-label="Instagram">📸</a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener" class="footer-social-btn" style="background-color: var(--card-subtle); color: var(--forest-green);" aria-label="LinkedIn">💼</a>
+              <a href="https://youtube.com" target="_blank" rel="noopener" class="footer-social-btn" style="background-color: var(--card-subtle); color: var(--forest-green);" aria-label="YouTube">▶️</a>
+              <a href="https://github.com" target="_blank" rel="noopener" class="footer-social-btn" style="background-color: var(--card-subtle); color: var(--forest-green);" aria-label="GitHub">🐙</a>
+            </div>
+          </div>
+
+          <!-- Contact Form Card -->
+          <div class="card" style="padding: 2.5rem 2rem;">
+            <h3 style="font-size: 1.35rem; color: var(--forest-green); margin-bottom: 1.5rem;">Send Us a Message</h3>
+
+            <form id="contact-form" novalidate>
+              <div class="form-group">
+                <label for="contact-name" class="form-label">Your Full Name *</label>
+                <input type="text" id="contact-name" class="form-control" placeholder="e.g. Maya Lin" required>
+                <div class="form-error">Please enter your name.</div>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-email" class="form-label">Email Address *</label>
+                <input type="email" id="contact-email" class="form-control" placeholder="e.g. maya@university.edu" required>
+                <div class="form-error">Please provide a valid email address.</div>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-subject" class="form-label">Subject *</label>
+                <input type="text" id="contact-subject" class="form-control" placeholder="e.g. Campus Recycling Proposal" required>
+                <div class="form-error">Please enter a subject.</div>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-message" class="form-label">Message *</label>
+                <textarea id="contact-message" class="form-control" rows="5" placeholder="Share your message or idea with the EcoQuest team..." required></textarea>
+                <div class="form-error">Please enter your message.</div>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">Send Message ✉️</button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-title">
+            <span>🌱</span>
+            <span>EcoQuest</span>
+          </div>
+          <p class="footer-brand-tagline">
+            "Small Actions. Big Impact." An interactive educational platform encouraging students and young people to build sustainable habits.
+          </p>
+          <div class="footer-social-row">
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="footer-social-btn" aria-label="Instagram">📸</a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener" class="footer-social-btn" aria-label="LinkedIn">💼</a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" class="footer-social-btn" aria-label="YouTube">▶️</a>
+            <a href="https://github.com" target="_blank" rel="noopener" class="footer-social-btn" aria-label="GitHub">🐙</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Quick Links</div>
+          <ul class="footer-links-list">
+            <li><a href="eco-challenges.html" class="footer-link">Eco Challenges</a></li>
+            <li><a href="eco-tips.html" class="footer-link">Eco Tips</a></li>
+            <li><a href="eco-calculator.html" class="footer-link">Calculator</a></li>
+            <li><a href="eco-quiz.html" class="footer-link">Quiz</a></li>
+            <li><a href="upcycling.html" class="footer-link">Upcycling</a></li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Sustainability Topics</div>
+          <ul class="footer-links-list">
+            <li><a href="waste-management.html" class="footer-link">Waste Management</a></li>
+            <li><a href="water-saving.html" class="footer-link">Water Conservation</a></li>
+            <li><a href="energy-saving.html" class="footer-link">Energy Saving</a></li>
+            <li><a href="green-food.html" class="footer-link">Sustainable Food</a></li>
+            <li><a href="green-travel.html" class="footer-link">Green Travel</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Eco Action</div>
+          <p style="font-size: 0.9rem; color: #bad2c2; margin-bottom: 1rem;">
+            Ready to explore our tips? Discover actionable daily habits right now.
+          </p>
+          <a href="eco-tips.html" class="btn btn-secondary btn-sm" style="width: 100%;">Explore Eco Tips 💡</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 EcoQuest. All Rights Reserved.</div>
+        <div>Built with HTML5, CSS3, & Vanilla JavaScript. Clean, static, client-side application.</div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top-btn" type="button" aria-label="Scroll back to top">↑</button>
+  <script src="js/script.js" defer></script>
+</body>
+</html>

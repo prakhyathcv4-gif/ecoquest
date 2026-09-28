@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eco Tips – Practical Everyday Green Habits 🌱</title>
+  <meta name="description" content="Discover actionable sustainability tips for college, home, travel, food, shopping, and technology with interactive instant category filtering.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo" aria-label="EcoQuest Home">
+        <span class="brand-icon">🌱</span>
+        <span>EcoQuest</span>
+        <span class="brand-tagline-subtle">· Green Habits</span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="main-nav" aria-label="Primary Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="eco-challenges.html" class="nav-link">Challenges</a>
+        <a href="eco-tips.html" class="nav-link active">Eco Tips</a>
+        
+        <div class="nav-dropdown">
+          <button class="nav-link nav-dropdown-trigger" type="button" aria-haspopup="true">
+            Topics ▾
+          </button>
+          <div class="nav-dropdown-menu">
+            <a href="waste-management.html" class="nav-dropdown-item">♻️ Waste Management</a>
+            <a href="water-saving.html" class="nav-dropdown-item">💧 Water Conservation</a>
+            <a href="energy-saving.html" class="nav-dropdown-item">⚡ Energy Saving</a>
+            <a href="green-food.html" class="nav-dropdown-item">🥗 Sustainable Food</a>
+            <a href="green-travel.html" class="nav-dropdown-item">🚲 Green Travel</a>
+          </div>
+        </div>
+
+        <a href="upcycling.html" class="nav-link">Upcycling</a>
+        <a href="eco-calculator.html" class="nav-link">Calculator</a>
+        <a href="eco-quiz.html" class="nav-link">Quiz</a>
+        <a href="leaderboard.html" class="nav-link">Leaderboard</a>
+      </nav>
+
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <button class="eco-points-badge" type="button" title="View Eco Leaderboard">
+          <span>🌱</span>
+          <span class="eco-points-value">120</span>
+          <span>pts</span>
+        </button>
+
+        <button class="btn-icon theme-toggle-btn" type="button" aria-label="Toggle theme">
+          <span class="theme-icon-slot">🌙</span>
+        </button>
+
+        <button class="mobile-nav-toggle" type="button" aria-label="Toggle mobile menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-menu-drawer" aria-label="Mobile Navigation">
+    <a href="index.html" class="mobile-nav-item">🏠 Home</a>
+    <a href="about.html" class="mobile-nav-item">📖 About EcoQuest</a>
+    <a href="eco-challenges.html" class="mobile-nav-item">🎯 Eco Challenges</a>
+    <a href="eco-tips.html" class="mobile-nav-item active">💡 Eco Tips</a>
+    
+    <div class="mobile-category-label">Sustainability Topics</div>
+    <a href="waste-management.html" class="mobile-nav-item">♻️ Waste Management</a>
+    <a href="water-saving.html" class="mobile-nav-item">💧 Water Conservation</a>
+    <a href="energy-saving.html" class="mobile-nav-item">⚡ Energy Saving</a>
+    <a href="green-food.html" class="mobile-nav-item">🥗 Sustainable Food</a>
+    <a href="green-travel.html" class="mobile-nav-item">🚲 Green Travel</a>
+
+    <div class="mobile-category-label">Interactive Tools</div>
+    <a href="upcycling.html" class="mobile-nav-item">✂️ Upcycling Gallery</a>
+    <a href="eco-calculator.html" class="mobile-nav-item">📊 Eco Calculator</a>
+    <a href="eco-quiz.html" class="mobile-nav-item">🧠 Eco Quiz</a>
+    <a href="leaderboard.html" class="mobile-nav-item">🏆 Leaderboard</a>
+    <a href="contact.html" class="mobile-nav-item">✉️ Contact Us</a>
+  </div>
+
+  <main>
+    <!-- PAGE HEADER -->
+    <section class="page-header">
+      <div class="container page-header-content">
+        <div class="page-kicker">Knowledge Base</div>
+        <h1 class="page-title">Curated Eco Tips</h1>
+        <p class="page-description">
+          Practical, low-cost green advice organized by lifestyle category. Filter by domain or search for tips you can implement right now.
+        </p>
+      </div>
+    </section>
+
+    <!-- SECTION: FILTERING & SEARCH -->
+    <section class="section">
+      <div class="container">
+        
+        <!-- Search bar -->
+        <div style="max-width: 500px; margin: 0 auto 2rem;">
+          <input type="text" id="tip-search-input" class="form-control" placeholder="🔍 Search eco tips (e.g. bottle, plastic, energy, food)..." aria-label="Search eco tips">
+        </div>
+
+        <!-- Category Filter Buttons -->
+        <div class="filter-tabs">
+          <button class="filter-btn tip-filter-btn active" data-filter="all">All Tips</button>
+          <button class="filter-btn tip-filter-btn" data-filter="home">🏡 Home</button>
+          <button class="filter-btn tip-filter-btn" data-filter="college">🎓 College</button>
+          <button class="filter-btn tip-filter-btn" data-filter="travel">🚲 Travel</button>
+          <button class="filter-btn tip-filter-btn" data-filter="food">🥗 Food</button>
+          <button class="filter-btn tip-filter-btn" data-filter="shopping">🛍️ Shopping</button>
+          <button class="filter-btn tip-filter-btn" data-filter="technology">💻 Technology</button>
+        </div>
+
+        <!-- Tips Grid -->
+        <div class="tips-grid grid-3">
+          
+          <!-- Tip 1 (Home) -->
+          <div class="card tip-card" data-category="home">
+            <div class="card-icon">🚰</div>
+            <div style="font-size: 0.8rem; font-weight: 700; color: var(--leaf-green); text-transform: uppercase; margin-bottom: 0.25rem;">Home</div>
+            <h3 class="card-title">Carry a Reusable Water Bottle</h3>
+            <p class="card-text">
+              Ditching single-use bottled water prevents approximately 156 plastic bottles from entering landfills each year per person, while saving you $200+ annually.
+            </p>
+            <div class="card-footer">
+              <span style="font-size: 0.8rem; color: var(--text-muted);">Impact: High</span>
+              <button class="card-link bookmark-tip-btn" data-tip-id="tip_bottle" style="background:none; border:none; cursor:pointer;">☆ Save Tip</button>
+            </div>
+          </div>
+
+          <!-- Tip 2 (Home) -->
+          <div class="card tip-card" data-category="home">
+            <div class="card-icon">🔌</div>
+            <div style="font-size: 0.8rem; font-weight: 700; color: var(--leaf-green); text-transform: uppercase; margin-bottom: 0.25rem;">Home</div>
+            <h3 class="card-title">Turn Off Devices When Not in Use</h3>
+            <p class="card-text">
+              Standby power (vampire draw) on idle TVs, microwaves, and desktop power bricks drains continuous wattage. Plug essentials into switched power strips.
+            </p>
+            <div class="card-footer">
+              <span style="font-size: 0.8rem; color: var(--text-muted);">Impact: Moderate</span>
+              <button class="card-link bookmark-tip-btn" data-tip-id="tip_devices" style="background:none; border:none; cursor:pointer;">☆ Save Tip</button>
+            </div>
+          </div>
+
+          <!-- Tip 3 (College) -->
+          <div class="card tip-card" data-category="college">
+            <div class="card-icon">📚</div>
+            <div style="font-size: 0.8rem; font-weight: 700; color: var(--leaf-green); text-transform: uppercase; margin-bottom: 0.25rem;">College</div>
+            <h3 class="card-title">Opt for Digital Textbooks & Second-Hand Books</h3>
+            <p class="card-text">
+              Borrow course literature from university libraries or buy digitized/used editions. It cuts student paper waste dramatically and saves hundreds of dollars.
+            </p>
+            <div class="card-footer">
+              <span style="font-size: 0.8rem; color: var(--text-muted);">Impact: High</span>
+              <button class="card-link bookmark-tip-btn" data-tip-id="tip_textbooks" style="background:none; border:none; cursor:pointer;">☆ Save Tip</button>
+            </div>
+          </div>
+
+          <!-- Tip 4 (Shopping) -->
+          <div class="card tip-card" data-category="shopping">
+            <div class="card-icon">🛍️</div>
+            <div style="font-size: 0.8rem; font-weight: 700; color: var(--leaf-green); text-transform: uppercase; margin-bottom: 0.25rem;">Shopping</div>
+            <h3 class="card-title">Use Cloth Bags Instead of Plastic Bags</h3>
+            <p class="card-text">
+              Keep a foldable cotton tote inside your backpack. Plastic carry bags take centuries to degrade and choke stormwater drains and waterways.
+            </p>
+            <div class="card-footer">
+              <span style="font-size: 0.8rem; color: var(--text-muted);">Impact: High</span>
+              <button class="card-link bookmark-tip-btn" data-tip-id="tip_cloth_bags" style="background:none; border:none; cursor:pointer;">☆ Save Tip</button>
+            </div>
+          </div>
+
+          <!-- Tip 5 (Travel) -->
+          <div class="card tip-card" data-category="travel">
+            <div class="card-icon">🚶</div>
+            <div style="font-size: 0.8rem; font-weight: 700; color: var(--leaf-green); text-transform: uppercase; margin-bottom: 0.25rem;">Travel</div>
+            <h3 class="card-title">Prefer Walking for Short Distances</h3>
+            <p class="card-text">
+              Trips under 1.5 km (1 mile) are ideal for walking or cycling. You avoid engine cold-start pollution spikes, burn calories, and bypass campus parking fees.
+            </p>
+            <div class="card-footer">
+              <span style="font-size: 0.8rem; color: var(--text-muted);">Impact: High</span>
+              <button class="card-link bookmark-tip-btn" data-tip-id="tip_walking" style="background:none; border:none; cursor:pointer;">☆ Save Tip</button>
+            </div>
+          </div>
+
+          <!-- Tip 6 (Food) -->
+          <div class="card tip-card" data-category="food">
+            <div class="card-icon">🍱</div>
+            <div style="font-size: 0.8rem; font-weight: 700; color: var(--leaf-green); text-transform: uppercase; margin-bottom: 0.25rem;">Food</div>
+            <h3 class="card-title">Reduce Food Waste with Smart Planning</h3>
+            <p class="card-text">
+              Plan weekly student meals before buying groceries. Use the "First In, First Out" rule in your fridge, and transform day-old rice or vegetables into stir-fries.
+            </p>
+            <div class="card-footer">
+              <span style="font-size: 0.8rem; color: var(--text-muted);">Impact: Very High</span>
+              <button class="card-link bookmark-tip-btn" data-tip-id="tip_food_waste" style="background:none; border:none; cursor:pointer;">☆ Save Tip</button>
+            </div>
+          </div>
+
+          <!-- Tip 7 (Technology) -->
+          <div class="card tip-card" data-category="technology">
+            <div class="card-icon">🔋</div>
+            <div style="font-size: 0.8rem; font-weight: 700; color: var(--leaf-green); text-transform: uppercase; margin-bottom: 0.25rem;">Technology</div>
+            <h3 class="card-title">Extend Device Lifespans & Enable Eco-Modes</h3>
+            <p class="card-text">
+              Enable battery saver modes on your laptop and smartphone. Upgrading devices every 4-5 years instead of every 2 years halts enormous mineral mining impacts.
+            </p>
+            <div class="card-footer">
+              <span style="font-size: 0.8rem; color: var(--text-muted);">Impact: High</span>
+              <button class="card-link bookmark-tip-btn" data-tip-id="tip_tech_lifespan" style="background:none; border:none; cursor:pointer;">☆ Save Tip</button>
+            </div>
+          </div>
+
+          <!-- Tip 8 (College) -->
+          <div class="card tip-card" data-category="college">
+            <div class="card-icon">☕</div>
+            <div style="font-size: 0.8rem; font-weight: 700; color: var(--leaf-green); text-transform: uppercase; margin-bottom: 0.25rem;">College</div>
+            <h3 class="card-title">Bring Your Own Mug to Campus Cafes</h3>
+            <p class="card-text">
+              Paper coffee cups are coated with a polyethylene plastic film that prevents standard paper recycling. Many campus cafes offer a 10% discount for personal mugs!
+            </p>
+            <div class="card-footer">
+              <span style="font-size: 0.8rem; color: var(--text-muted);">Impact: Moderate</span>
+              <button class="card-link bookmark-tip-btn" data-tip-id="tip_coffee_mug" style="background:none; border:none; cursor:pointer;">☆ Save Tip</button>
+            </div>
+          </div>
+
+          <!-- Tip 9 (Food) -->
+          <div class="card tip-card" data-category="food">
+            <div class="card-icon">🥦</div>
+            <div style="font-size: 0.8rem; font-weight: 700; color: var(--leaf-green); text-transform: uppercase; margin-bottom: 0.25rem;">Food</div>
+            <h3 class="card-title">Embrace "Meatless Mondays"</h3>
+            <p class="card-text">
+              Livestock agriculture generates significant methane and requires huge land and water inputs. Swapping meat for lentils or beans just one day a week saves 1,000+ liters of water!
+            </p>
+            <div class="card-footer">
+              <span style="font-size: 0.8rem; color: var(--text-muted);">Impact: High</span>
+              <button class="card-link bookmark-tip-btn" data-tip-id="tip_meatless" style="background:none; border:none; cursor:pointer;">☆ Save Tip</button>
+            </div>
+          </div>
+
+          <!-- Tip 10 (Shopping) -->
+          <div class="card tip-card" data-category="shopping">
+            <div class="card-icon">👕</div>
+            <div style="font-size: 0.8rem; font-weight: 700; color: var(--leaf-green); text-transform: uppercase; margin-bottom: 0.25rem;">Shopping</div>
+            <h3 class="card-title">Thrift & Clothes Swap Over Fast Fashion</h3>
+            <p class="card-text">
+              Fast fashion is responsible for 10% of global carbon emissions and polluted dye runoff. Shop vintage, thrift stores, or host clothes swaps with dorm friends.
+            </p>
+            <div class="card-footer">
+              <span style="font-size: 0.8rem; color: var(--text-muted);">Impact: Very High</span>
+              <button class="card-link bookmark-tip-btn" data-tip-id="tip_thrift" style="background:none; border:none; cursor:pointer;">☆ Save Tip</button>
+            </div>
+          </div>
+
+          <!-- Tip 11 (Travel) -->
+          <div class="card tip-card" data-category="travel">
+            <div class="card-icon">🚌</div>
+            <div style="font-size: 0.8rem; font-weight: 700; color: var(--leaf-green); text-transform: uppercase; margin-bottom: 0.25rem;">Travel</div>
+            <h3 class="card-title">Take University Shuttles & City Buses</h3>
+            <p class="card-text">
+              A single loaded city bus replaces up to 40 personal passenger cars on congested morning roads, slashing particulate smog and lowering traffic noise.
+            </p>
+            <div class="card-footer">
+              <span style="font-size: 0.8rem; color: var(--text-muted);">Impact: High</span>
+              <button class="card-link bookmark-tip-btn" data-tip-id="tip_bus" style="background:none; border:none; cursor:pointer;">☆ Save Tip</button>
+            </div>
+          </div>
+
+          <!-- Tip 12 (Technology) -->
+          <div class="card tip-card" data-category="technology">
+            <div class="card-icon">☁️</div>
+            <div style="font-size: 0.8rem; font-weight: 700; color: var(--leaf-green); text-transform: uppercase; margin-bottom: 0.25rem;">Technology</div>
+            <h3 class="card-title">Digital Declutter & Clean Out Unread Cloud Files</h3>
+            <p class="card-text">
+              Data centers require massive constant electricity for cooling and server racks. Unsubscribe from junk newsletters and delete gigabytes of duplicated cloud files.
+            </p>
+            <div class="card-footer">
+              <span style="font-size: 0.8rem; color: var(--text-muted);">Impact: Moderate</span>
+              <button class="card-link bookmark-tip-btn" data-tip-id="tip_cloud" style="background:none; border:none; cursor:pointer;">☆ Save Tip</button>
+            </div>
+          </div>
+
+        </div>
+
+        <div id="tips-empty-notice" style="display: none; text-align: center; padding: 3rem;">
+          <span style="font-size: 3rem;">🔍</span>
+          <h3 style="font-size: 1.35rem; color: var(--forest-green); margin-top: 0.5rem;">No matching tips found</h3>
+          <p style="color: var(--text-muted);">Try a different keyword or reset your category filter.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-title">
+            <span>🌱</span>
+            <span>EcoQuest</span>
+          </div>
+          <p class="footer-brand-tagline">
+            "Small Actions. Big Impact." An interactive educational platform encouraging students and young people to build sustainable habits.
+          </p>
+          <div class="footer-social-row">
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="footer-social-btn" aria-label="Instagram">📸</a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener" class="footer-social-btn" aria-label="LinkedIn">💼</a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" class="footer-social-btn" aria-label="YouTube">▶️</a>
+            <a href="https://github.com" target="_blank" rel="noopener" class="footer-social-btn" aria-label="GitHub">🐙</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Quick Links</div>
+          <ul class="footer-links-list">
+            <li><a href="eco-challenges.html" class="footer-link">Eco Challenges</a></li>
+            <li><a href="eco-tips.html" class="footer-link">Eco Tips</a></li>
+            <li><a href="eco-calculator.html" class="footer-link">Calculator</a></li>
+            <li><a href="eco-quiz.html" class="footer-link">Quiz</a></li>
+            <li><a href="upcycling.html" class="footer-link">Upcycling</a></li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Sustainability Topics</div>
+          <ul class="footer-links-list">
+            <li><a href="waste-management.html" class="footer-link">Waste Management</a></li>
+            <li><a href="water-saving.html" class="footer-link">Water Conservation</a></li>
+            <li><a href="energy-saving.html" class="footer-link">Energy Saving</a></li>
+            <li><a href="green-food.html" class="footer-link">Sustainable Food</a></li>
+            <li><a href="green-travel.html" class="footer-link">Green Travel</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Eco Action</div>
+          <p style="font-size: 0.9rem; color: #bad2c2; margin-bottom: 1rem;">
+            Ready to calculate your overall green habit score? Use our interactive 5-question Eco Calculator!
+          </p>
+          <a href="eco-calculator.html" class="btn btn-secondary btn-sm" style="width: 100%;">Eco Calculator 📊</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 EcoQuest. All Rights Reserved.</div>
+        <div>Built with HTML5, CSS3, & Vanilla JavaScript. Clean, static, client-side application.</div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top-btn" type="button" aria-label="Scroll back to top">↑</button>
+  <script src="js/script.js" defer></script>
+</body>
+</html>

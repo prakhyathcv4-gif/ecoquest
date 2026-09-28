@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sustainable Transportation & Travel Impact – EcoQuest 🚲</title>
+  <meta name="description" content="Explore low-carbon commuting options like cycling, public transit, and electric mobility. Compare travel footprint estimates with our interactive calculator.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo" aria-label="EcoQuest Home">
+        <span class="brand-icon">🌱</span>
+        <span>EcoQuest</span>
+        <span class="brand-tagline-subtle">· Green Habits</span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="main-nav" aria-label="Primary Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="eco-challenges.html" class="nav-link">Challenges</a>
+        <a href="eco-tips.html" class="nav-link">Eco Tips</a>
+        
+        <div class="nav-dropdown">
+          <button class="nav-link nav-dropdown-trigger active" type="button" aria-haspopup="true">
+            Topics ▾
+          </button>
+          <div class="nav-dropdown-menu">
+            <a href="waste-management.html" class="nav-dropdown-item">♻️ Waste Management</a>
+            <a href="water-saving.html" class="nav-dropdown-item">💧 Water Conservation</a>
+            <a href="energy-saving.html" class="nav-dropdown-item">⚡ Energy Saving</a>
+            <a href="green-food.html" class="nav-dropdown-item">🥗 Sustainable Food</a>
+            <a href="green-travel.html" class="nav-dropdown-item active">🚲 Green Travel</a>
+          </div>
+        </div>
+
+        <a href="upcycling.html" class="nav-link">Upcycling</a>
+        <a href="eco-calculator.html" class="nav-link">Calculator</a>
+        <a href="eco-quiz.html" class="nav-link">Quiz</a>
+        <a href="leaderboard.html" class="nav-link">Leaderboard</a>
+      </nav>
+
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <button class="eco-points-badge" type="button" title="View Eco Leaderboard">
+          <span>🌱</span>
+          <span class="eco-points-value">120</span>
+          <span>pts</span>
+        </button>
+
+        <button class="btn-icon theme-toggle-btn" type="button" aria-label="Toggle theme">
+          <span class="theme-icon-slot">🌙</span>
+        </button>
+
+        <button class="mobile-nav-toggle" type="button" aria-label="Toggle mobile menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-menu-drawer" aria-label="Mobile Navigation">
+    <a href="index.html" class="mobile-nav-item">🏠 Home</a>
+    <a href="about.html" class="mobile-nav-item">📖 About EcoQuest</a>
+    <a href="eco-challenges.html" class="mobile-nav-item">🎯 Eco Challenges</a>
+    <a href="eco-tips.html" class="mobile-nav-item">💡 Eco Tips</a>
+    
+    <div class="mobile-category-label">Sustainability Topics</div>
+    <a href="waste-management.html" class="mobile-nav-item">♻️ Waste Management</a>
+    <a href="water-saving.html" class="mobile-nav-item">💧 Water Conservation</a>
+    <a href="energy-saving.html" class="mobile-nav-item">⚡ Energy Saving</a>
+    <a href="green-food.html" class="mobile-nav-item">🥗 Sustainable Food</a>
+    <a href="green-travel.html" class="mobile-nav-item active">🚲 Green Travel</a>
+
+    <div class="mobile-category-label">Interactive Tools</div>
+    <a href="upcycling.html" class="mobile-nav-item">✂️ Upcycling Gallery</a>
+    <a href="eco-calculator.html" class="mobile-nav-item">📊 Eco Calculator</a>
+    <a href="eco-quiz.html" class="mobile-nav-item">🧠 Eco Quiz</a>
+    <a href="leaderboard.html" class="mobile-nav-item">🏆 Leaderboard</a>
+    <a href="contact.html" class="mobile-nav-item">✉️ Contact Us</a>
+  </div>
+
+  <main>
+    <!-- PAGE HEADER -->
+    <section class="page-header">
+      <div class="container page-header-content">
+        <div class="page-kicker">Low-Carbon Mobility</div>
+        <h1 class="page-title">Sustainable Travel</h1>
+        <p class="page-description">
+          The transport sector is responsible for roughly 25% of global energy-related greenhouse gases. Discover how walking, cycling, and shared transit transform our cities.
+        </p>
+      </div>
+    </section>
+
+    <!-- SECTION: INTERACTIVE TRANSPORTATION COMPARISON -->
+    <section class="section">
+      <div class="container" style="max-width: 860px;">
+        <div class="section-header">
+          <div class="section-kicker">Interactive Comparison</div>
+          <h2 class="section-title">Commute Impact Visualizer</h2>
+          <p class="section-subtitle">
+            Input a trip distance and select your preferred transportation to see the estimated relative environmental impact compared across modes.
+          </p>
+        </div>
+
+        <div id="travel-calculator-arena" class="travel-calculator">
+          <div class="grid-2" style="margin-bottom: 2rem;">
+            <div class="calc-group">
+              <label for="travel-distance" class="calc-label">Trip Distance (Kilometers):</label>
+              <input type="number" id="travel-distance" class="calc-input" value="12" min="1" max="500">
+            </div>
+
+            <div class="calc-group">
+              <label for="travel-mode" class="calc-label">Selected Transport Mode:</label>
+              <select id="travel-mode" class="calc-input">
+                <option value="walk">🚶 Walking (Active)</option>
+                <option value="bike">🚲 Bicycle / e-Bike (Active)</option>
+                <option value="train">🚆 Metro / Electric Train (Transit)</option>
+                <option value="bus">🚌 Public Transit Bus (Shared)</option>
+                <option value="ev">⚡ Electric Vehicle (EV)</option>
+                <option value="car">🚗 Single-Occupant Petrol Car</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Impact Rating Display -->
+          <div style="background-color: var(--card-subtle); border-radius: var(--radius-md); padding: 1.5rem; text-align: center; border: 1px solid var(--border-subtle); margin-bottom: 2rem;">
+            <div style="font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700; margin-bottom: 0.25rem;">Relative Environmental Impact</div>
+            <div id="travel-impact-rating" class="calc-result-number impact-low" style="font-size: 1.5rem; color: #16a34a;">
+              Lower Impact (Zero Direct Emissions)
+            </div>
+          </div>
+
+          <!-- Relative Comparison Bars -->
+          <div class="travel-result-bars">
+            <h4 style="font-size: 1rem; color: var(--forest-green); margin-bottom: 0.5rem;">Relative Comparative Footprint for this Trip:</h4>
+            
+            <div class="travel-bar-item">
+              <div class="travel-bar-header"><span>🚶 Walking / Running</span><span>0% Relative Impact</span></div>
+              <div class="travel-bar-track"><div id="bar-walk" class="travel-bar-fill impact-low" style="width: 2%;">Zero</div></div>
+            </div>
+
+            <div class="travel-bar-item">
+              <div class="travel-bar-header"><span>🚲 Bicycle / Scooter</span><span>0% Direct Emissions</span></div>
+              <div class="travel-bar-track"><div id="bar-bike" class="travel-bar-fill impact-low" style="width: 2%;">Zero</div></div>
+            </div>
+
+            <div class="travel-bar-item">
+              <div class="travel-bar-header"><span>🚆 Metro / Train</span><span>~20% vs Gas Car</span></div>
+              <div class="travel-bar-track"><div id="bar-train" class="travel-bar-fill impact-low" style="width: 20%;">Clean Transit</div></div>
+            </div>
+
+            <div class="travel-bar-item">
+              <div class="travel-bar-header"><span>🚌 City Bus (Shared)</span><span>~40% vs Gas Car</span></div>
+              <div class="travel-bar-track"><div id="bar-bus" class="travel-bar-fill impact-mid" style="width: 40%;">Shared Bus</div></div>
+            </div>
+
+            <div class="travel-bar-item">
+              <div class="travel-bar-header"><span>⚡ Electric Vehicle (EV)</span><span>~30% vs Gas Car</span></div>
+              <div class="travel-bar-track"><div id="bar-ev" class="travel-bar-fill impact-mid" style="width: 30%;">Clean EV</div></div>
+            </div>
+
+            <div class="travel-bar-item">
+              <div class="travel-bar-header"><span>🚗 Single Petrol Car (Baseline)</span><span>100% Benchmark</span></div>
+              <div class="travel-bar-track"><div id="bar-car" class="travel-bar-fill impact-high" style="width: 100%;">Highest Emissions</div></div>
+            </div>
+          </div>
+
+          <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 1.5rem; text-align: center;">
+            *Educational Notice: Estimates represent relative educational comparative scales based on international transit benchmarks and should not be cited as certified carbon credit measurements.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: THE SIX MODES OF GREEN TRAVEL -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">Modal Hierarchy</div>
+          <h2 class="section-title">Six Sustainable Transit Options</h2>
+          <p class="section-subtitle">
+            Choosing the right tool for each journey maximizes efficiency, saves money, and improves personal well-being.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <!-- Walking -->
+          <div class="card">
+            <div class="card-icon">🚶</div>
+            <h3 class="card-title">Walking</h3>
+            <p class="card-text">
+              The purest zero-emission commute. Ideal for trips under 2 km. It improves cardiovascular health, burns stress hormones, and costs zero dollars.
+            </p>
+          </div>
+
+          <!-- Cycling -->
+          <div class="card">
+            <div class="card-icon">🚲</div>
+            <h3 class="card-title">Cycling & e-Bikes</h3>
+            <p class="card-text">
+              Bicycles are the most energetically efficient machines ever invented. Cover 5-10 km across university campuses with zero fossil combustion and zero parking fees.
+            </p>
+          </div>
+
+          <!-- Public Transport -->
+          <div class="card">
+            <div class="card-icon">🚌</div>
+            <h3 class="card-title">Public Transit</h3>
+            <p class="card-text">
+              Buses and shuttles maximize road space by transporting dozens of commuters in a single vehicle corridor, drastically reducing urban gridlock.
+            </p>
+          </div>
+
+          <!-- Train -->
+          <div class="card">
+            <div class="card-icon">🚆</div>
+            <h3 class="card-title">Electric Rail & Metro</h3>
+            <p class="card-text">
+              Heavy rail runs along dedicated steel tracks with minimal rolling friction, drawing clean electricity from centralized regional power grids.
+            </p>
+          </div>
+
+          <!-- Carpooling -->
+          <div class="card">
+            <div class="card-icon">🚗</div>
+            <h3 class="card-title">Carpooling & Rideshare</h3>
+            <p class="card-text">
+              When transit is unavailable, filling four passenger seats in one vehicle divides total per-person emissions and fuel expenses by 75%.
+            </p>
+          </div>
+
+          <!-- Electric Vehicles -->
+          <div class="card">
+            <div class="card-icon">⚡</div>
+            <h3 class="card-title">Electric Vehicles</h3>
+            <p class="card-text">
+              EVs produce zero direct tailpipe smog, nitrogen oxides, or soot. As the electrical grid greens with solar and wind, EVs become cleaner each month.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-title">
+            <span>🌱</span>
+            <span>EcoQuest</span>
+          </div>
+          <p class="footer-brand-tagline">
+            "Small Actions. Big Impact." An interactive educational platform encouraging students and young people to build sustainable habits.
+          </p>
+          <div class="footer-social-row">
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="footer-social-btn" aria-label="Instagram">📸</a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener" class="footer-social-btn" aria-label="LinkedIn">💼</a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" class="footer-social-btn" aria-label="YouTube">▶️</a>
+            <a href="https://github.com" target="_blank" rel="noopener" class="footer-social-btn" aria-label="GitHub">🐙</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Quick Links</div>
+          <ul class="footer-links-list">
+            <li><a href="eco-challenges.html" class="footer-link">Eco Challenges</a></li>
+            <li><a href="eco-tips.html" class="footer-link">Eco Tips</a></li>
+            <li><a href="eco-calculator.html" class="footer-link">Calculator</a></li>
+            <li><a href="eco-quiz.html" class="footer-link">Quiz</a></li>
+            <li><a href="upcycling.html" class="footer-link">Upcycling</a></li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Sustainability Topics</div>
+          <ul class="footer-links-list">
+            <li><a href="waste-management.html" class="footer-link">Waste Management</a></li>
+            <li><a href="water-saving.html" class="footer-link">Water Conservation</a></li>
+            <li><a href="energy-saving.html" class="footer-link">Energy Saving</a></li>
+            <li><a href="green-food.html" class="footer-link">Sustainable Food</a></li>
+            <li><a href="green-travel.html" class="footer-link">Green Travel</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Eco Action</div>
+          <p style="font-size: 0.9rem; color: #bad2c2; margin-bottom: 1rem;">
+            Curious about creative reuse? Discover step-by-step DIY upcycling guides!
+          </p>
+          <a href="upcycling.html" class="btn btn-secondary btn-sm" style="width: 100%;">DIY Upcycling ✂️</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 EcoQuest. All Rights Reserved.</div>
+        <div>Built with HTML5, CSS3, & Vanilla JavaScript. Clean, static, client-side application.</div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top-btn" type="button" aria-label="Scroll back to top">↑</button>
+  <script src="js/script.js" defer></script>
+</body>
+</html>
